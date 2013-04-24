@@ -1,0 +1,14 @@
+Maven setup:
+http://www.tutorialspoint.com/maven/maven_environment_setup.htm
+
+Git tutorial:
+http://www.youtube.com/watch?v=mYjZtU1-u9Y
+
+Eclipse Juno:
+http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/juno/SR2/eclipse-jee-juno-SR2-win32-x86_64.zip
+
+Eclipse Web tools - http://www.eclipse.org/webtools/
+Maven Integration - 
+
+Eclipse Tomcat:
+Window->Preferences->Server->Runtime add tomcat location
