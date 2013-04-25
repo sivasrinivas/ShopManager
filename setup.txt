@@ -12,3 +12,4 @@ Maven Integration -
 
 Eclipse Tomcat:
 Window->Preferences->Server->Runtime add tomcat location
+Troubleshoot: http://www.youtube.com/watch?v=2ih-t9WAmM8
