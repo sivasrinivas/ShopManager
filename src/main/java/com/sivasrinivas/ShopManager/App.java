@@ -31,5 +31,10 @@ public class App {
 		}
 		
 	}
+	
+	public String execute(){
+		System.out.println("Action executed!");
+		return "success";
+	}
 
 }
