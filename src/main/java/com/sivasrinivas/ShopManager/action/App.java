@@ -1,4 +1,4 @@
-package com.sivasrinivas.ShopManager;
+package com.sivasrinivas.ShopManager.action;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;

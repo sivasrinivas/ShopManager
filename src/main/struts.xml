@@ -6,7 +6,7 @@
 <struts>
 
 	<package name="default" extends="struts-default" namespace="/">
-		<action name="welcome" class="com.sivasrinivas.ShopManager.App">
+		<action name="welcome" class="com.sivasrinivas.ShopManager.action.App">
 			<result name="success">/index.jsp</result>
 		</action>
 	</package>

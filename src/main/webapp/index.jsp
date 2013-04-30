@@ -7,13 +7,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Shop Mnager</title>
 <script type="text/javascript"
-	src="<%=request.getContextPath()%>/resources/js/jquery.js"></script>
+	src="/resources/js/jquery.js"></script>
 <script type="text/javascript"
-	src="<%=request.getContextPath()%>/resources/js/bootstrap.js"></script>
+	src="/resources/js/bootstrap.js"></script>
 <link rel="stylesheet" media="screen"
-	href="<%=request.getContextPath()%>/resources/css/bootstrap.css"></link>
+	href="/resources/css/bootstrap.css"></link>
 <link rel="stylesheet" media="screen"
-	href="<%=request.getContextPath()%>/resources/css/bootstrap-respnsive.css"></link>
+	href="/resources/css/bootstrap-respnsive.css"></link>
 </head>
 <body>
 	<center>
