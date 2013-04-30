@@ -9,6 +9,14 @@
 		<action name="welcome" class="com.sivasrinivas.ShopManager.action.App">
 			<result name="success">/index.jsp</result>
 		</action>
+		<action name="login" class="com.sivasrinivas.ShopManager.action.LoginAction">
+			<result name="input">/login.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+		<action name="register" class="com.sivasrinivas.ShopManager.action.RegisterAction">
+			<result name="input">/register.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
 	</package>
 
 </struts>
