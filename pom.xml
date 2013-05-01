@@ -70,6 +70,23 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.0-beta5</version>
 		</dependency>
+		<!-- needed to compile log4j classes -->
+		<dependency>
+			<groupId>com.sun</groupId>
+			<artifactId>jconsole</artifactId>
+			<version>1.7.0</version>
+			<scope>system</scope>
+			<type>jar</type>
+			<systemPath>C:\Program Files\Java\jdk1.7.0_02\lib\jconsole.jar</systemPath>
+		</dependency>
+		<!-- Java dependency -->
+		<dependency>
+			<groupId>com.sun</groupId>
+			<artifactId>tools</artifactId>
+			<version>1.7</version>
+			<scope>system</scope>
+			<systemPath>C:\Program Files\Java\jdk1.7.0_02\lib\tools.jar</systemPath>
+		</dependency>
 
 	</dependencies>
 

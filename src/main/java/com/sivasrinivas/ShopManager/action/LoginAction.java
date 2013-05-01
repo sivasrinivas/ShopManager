@@ -26,6 +26,7 @@ public class LoginAction extends ActionSupport{
 		System.out.println(user.getUserId());
 		System.out.println(user.getPassword());
 		logger.trace("executed");
+		logger.error("sample error");
 		return SUCCESS;
 	}
 
