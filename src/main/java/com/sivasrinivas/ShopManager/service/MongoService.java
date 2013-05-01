@@ -16,7 +16,7 @@ public class MongoService {
 			mongo = new MongoClient("localhost", 27017);
 			db = mongo.getDB("testdb");
 			DBCollection table = db.getCollection("users");
-			
+			/*
 			BasicDBObject doc = new BasicDBObject();
 			doc.put("name", "siva");
 			table.insert(doc);
@@ -24,7 +24,7 @@ public class MongoService {
 			DBCursor cursor = table.find(doc);
 			while(cursor.hasNext()){
 				System.out.println(cursor.next());
-			}
+			}*/
 		}catch(Exception e){
 			e.printStackTrace();
 		}
