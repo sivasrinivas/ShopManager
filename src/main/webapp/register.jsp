@@ -6,6 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Register - ShopManager</title>
+<script type="text/javascript"	src="/ShopManager/res/js/jquery.js"></script>
+<script type="text/javascript"	src="/ShopManager/res/js/bootstrap.js"></script>
+<link rel="stylesheet" media="screen" href="/ShopManager/res/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen" href="/ShopManager/res/css/bootstrap-responsive.css"></link>
 </head>
 <body>
 
