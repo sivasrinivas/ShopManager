@@ -6,14 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Shop Mnager</title>
-<script type="text/javascript"
-	src="/resources/js/jquery.js"></script>
-<script type="text/javascript"
-	src="/resources/js/bootstrap.js"></script>
-<link rel="stylesheet" media="screen"
-	href="/resources/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen"
-	href="/resources/css/bootstrap-respnsive.css"></link>
+<script type="text/javascript"	src="/shopmanager/res/js/jquery.js"></script>
+<script type="text/javascript"	src="/shopmanager/res/js/bootstrap.js"></script>
+<link rel="stylesheet" media="screen" href="/shopmanager/res/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen" href="/shopmanager/res/css/bootstrap-respnsive.css"></link>
 </head>
 <body>
 	<center>
