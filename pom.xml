@@ -35,6 +35,18 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>2.10.1</version>
 		</dependency>
+		<!-- Spring data mongodb -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>1.2.1.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+			<version>2.2.2</version>
+		</dependency>
 		<!-- Struts2 dependencies -->
 		<dependency>
 			<groupId>org.apache.struts</groupId>
