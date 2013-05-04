@@ -7,7 +7,6 @@ import org.bson.BSONObject;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import com.mongodb.DBObject;
 @Document(collection= "users")
 public class UserModel {
 	
@@ -41,12 +40,7 @@ public class UserModel {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public long getId() {
-		return id;
-	}
-	public void setId(long id) {
-		this.id = id;
-	}
+	
 	public String getUserId() {
 		return userId;
 	}
