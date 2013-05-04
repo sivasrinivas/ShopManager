@@ -4,20 +4,31 @@ import java.util.Map;
 import java.util.Set;
 
 import org.bson.BSONObject;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.mongodb.DBObject;
-
-public class UserModel implements DBObject{
+@Document(collection= "users")
+public class UserModel {
 	
-	private static final long serialVersionUID = 1L;
-	
+	@Id
+	private String id;
 	private String firstName;
 	private String lastName;
-	private long id;
+	private long uid;
 	private String userId;
 	private String emailId;
 	private String password;
 	
+	public long getUid() {
+		return uid;
+	}
+	public void setUid(long uid) {
+		this.uid = uid;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
