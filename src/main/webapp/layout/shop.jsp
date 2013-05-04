@@ -4,20 +4,19 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script type="text/javascript" src="/ShopManager/res/js/jquery.js"></script>
-<script type="text/javascript" src="/ShopManager/res/js/bootstrap.js"></script>
-<link rel="stylesheet" media="screen"
-	href="/ShopManager/res/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen"
-	href="/ShopManager/res/css/bootstrap-responsive.css"></link>
+<script type="text/javascript" src="/ShopManager/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/ShopManager/assets/js/bootstrap.js"></script>
+<link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
 </head>
 <body>
-	<div class="container-fluid">
+	<div class="container-fluid navbar">
 		<div class="row-fluid">
 			<jsp:include page="header.jsp"></jsp:include>
 			<jsp:include page="container.jsp"></jsp:include>
 			<jsp:include page="footer.jsp"></jsp:include>
 		</div>
 	</div>
+
 </body>
 </html>
