@@ -1,34 +1,15 @@
 package com.sivasrinivas.ShopManager.service;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.MongoClient;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.data.mongodb.core.MongoOperations;
 
 public class MongoService {
-
-	private MongoClient mongo;
-	private DB db;
+	private static final ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringMongoConfig.class);
+	private static final MongoOperations mongoOperation = (MongoOperations) ctx.getBean("mongoTemplate");
 	
-	public DB getDB(){
-		try{
-			mongo = new MongoClient("localhost", 27017);
-			db = mongo.getDB("testdb");
-			DBCollection table = db.getCollection("users");
-			/*
-			BasicDBObject doc = new BasicDBObject();
-			doc.put("name", "siva");
-			table.insert(doc);
-			
-			DBCursor cursor = table.find(doc);
-			while(cursor.hasNext()){
-				System.out.println(cursor.next());
-			}*/
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		return db;
+	public static MongoOperations getMongoOperation(){
+		return mongoOperation;
 	}
 	
 }

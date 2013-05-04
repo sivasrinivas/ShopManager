@@ -9,12 +9,11 @@
 		<action name="welcome" class="com.sivasrinivas.ShopManager.action.App">
 			<result name="success">/index.jsp</result>
 		</action>
-		<action name="login" class="com.sivasrinivas.ShopManager.action.LoginAction">
-			<result name="input">/login.jsp</result>
-			<result name="success">/index.jsp</result>
-		</action>
-		<action name="register" class="com.sivasrinivas.ShopManager.action.RegisterAction">
-			<result name="input">/register.jsp</result>
+		
+		<action name="Account_*" class="com.sivasrinivas.ShopManager.action.AccountAction"
+		method="{1}">
+			<result name="loginsuccess">/index.jsp</result>
+			<result name="loginfail">/login.jsp</result>
 			<result name="success">/index.jsp</result>
 		</action>
 	</package>

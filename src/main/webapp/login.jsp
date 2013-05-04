@@ -16,17 +16,17 @@
 </head>
 <body>
 
-	<s:form id="loginForm" action="login" cssClass="form-horizontal">
+	<s:form id="loginForm" action="Account_login" cssClass="form-horizontal">
 		<div class="control-group">
-			<label class="control-label">Email</label>
+			<label class="control-label">User Id:</label>
 			<div class="controls">
-				<s:textfield id="emailId" placeholder="Email"/>
+				<s:textfield id="userId" name="user.userId" placeholder="User Id"/>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label">Password</label>
 			<div class="controls">
-				<s:password id="password" placeholder="Password" />
+				<s:password id="password" name="user.password" placeholder="Password" />
 			</div>
 		</div>
 		<div class="control-group">
