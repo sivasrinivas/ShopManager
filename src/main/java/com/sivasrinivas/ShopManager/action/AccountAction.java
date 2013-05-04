@@ -16,7 +16,7 @@ public class AccountAction extends ActionSupport{
 	 * 
 	 */
 	private static final long serialVersionUID = 2576055902932974408L;
-	static Logger logger = LogManager.getLogger(LoginAction.class.getName());
+	static Logger logger = LogManager.getLogger(AccountAction.class.getName());
 	
 	private UserModel user;
 	private String confPassword;
