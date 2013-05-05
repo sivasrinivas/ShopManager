@@ -13,7 +13,7 @@
 		<action name="Account_*" class="com.sivasrinivas.ShopManager.action.AccountAction"
 		method="{1}">
 			<result name="loginsuccess">/index.jsp</result>
-			<result name="loginfail">/login.jsp</result>
+			<result name="loginfail" type="tiles">/account.login.tiles</result>
 			<result name="success">/index.jsp</result>
 		</action>
 	</package>
