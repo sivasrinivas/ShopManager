@@ -4,21 +4,26 @@
        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
 <tiles-definitions>
-    <definition name="baseLayout" template="/layout/baselayout.jsp">
-        <put-attribute name="header" value="/layout/header.jsp" />
-        <put-attribute name="container" value="/layout/container.jsp" />
-        <put-attribute name="footer" value="/layout/footer.jsp" />
-    </definition>
-    
-    <definition name="innerLayout" template="/layout/container.jsp">
+
+	<definition name="innerLayout" template="/layout/container.jsp">
     	<put-attribute name="title" value="" />
         <put-attribute name="sidebar" value="/layout/sidebar.jsp" />
         <put-attribute name="body" value="" />
         <put-attribute name="related" value="/layout/related.jsp" />
     </definition>
     
+    <definition name="baseLayout" template="/layout/baselayout.jsp">
+    	<put-attribute name="title" value="" />
+    	<put-attribute name="header" value="/layout/header.jsp" />
+        <put-attribute name="sidebar" value="/layout/sidebar.jsp" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="related" value="" />
+        <put-attribute name="footer" value="/layout/footer.jsp" />
+    </definition>
+    
     <definition name="/account.login.tiles" extends="baseLayout">
         <put-attribute name="title" value="Login - ShopManager" />
+        <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/login.jsp" />
     </definition>
     

@@ -9,17 +9,31 @@
 <script type="text/javascript" src="/ShopManager/assets/js/bootstrap.js"></script>
 <link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap.css"></link>
 <link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
+<!-- custom defined css -->
+<link rel="stylesheet" href="assets/css/basic.css"></link>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
-	<div class="container-fluid navbar">
-		<div class="row-fluid">
-			<jsp:include page="header.jsp"></jsp:include>
-			<jsp:include page="container.jsp"></jsp:include>
-			<jsp:include page="footer.jsp"></jsp:include>
-			<tiles:insertAttribute name="header" />
-			<tiles:insertAttribute name="container" />
-			<tiles:insertAttribute name="footer" />
+	<div class="container navbar">
+		<div class="row">
+			<div class="row">
+				<tiles:insertAttribute name="header" />
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="span3">
+						<tiles:insertAttribute name="sidebar" />
+						<br>
+						<tiles:insertAttribute name="related" />
+					</div>
+					<div class="span9">
+						<tiles:insertAttribute name="body" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<tiles:insertAttribute name="footer" />
+			</div>
 		</div>
 	</div>
 

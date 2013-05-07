@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Shop Mnager</title>
+<title>Shop Manager</title>
 <script type="text/javascript" src="/ShopManager/res/js/jquery.js"></script>
 <script type="text/javascript" src="/ShopManager/res/js/bootstrap.js"></script>
 <link rel="stylesheet" media="screen"

@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<strong>This is sidebar.</strong>
-The former CEO of the Italian defence giant Finmeccanica has been freed from jail pending his trial on corruption charges next month.
-Giuseppe Orsi was released Saturday after some 80 days in pre-trial detention. He faces charges of paying bribes to secure a 560 million euro ($670 million) deal to sell 12 helicopters to India.
+
+<ul class="nav nav-list">
+	<li class="active"><s:a href="#">Category 1<i class="icon-chevron-right"></i></s:a></li>
+	<li><s:a href="#">Category 2</s:a></li>
+	<li><s:a href="#">Category 3</s:a></li>
+	<li><s:a href="#">Category 4</s:a></li>
+	<li><s:a href="#">Category 5</s:a></li>
+	<li><s:a href="#">Category 6</s:a></li>
+	<li><s:a href="#">Category 7</s:a></li>
+	<li><s:a href="#">Category 8</s:a></li>
+</ul>
