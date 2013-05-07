@@ -18,7 +18,7 @@
 	<div class="container-fluid">
 		<div class="page-header">
 			<h2>Shop Manager</h2>
-			<a href="/ShopManager/login.jsp">login</a>
+			<a href="/ShopManager/Account_login.action">login</a>
 		</div>
 		
 

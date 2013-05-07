@@ -35,9 +35,12 @@ public class AccountAction extends ActionSupport{
 	}
 	
 	public String register(){
+		return "regform";
+	}
+	
+public String registerSubmit(){
 		
 		MongoOperations mongoOperation = MongoService.getMongoOperation();
-	 
 		// save
 		mongoOperation.save(getUser());
 		

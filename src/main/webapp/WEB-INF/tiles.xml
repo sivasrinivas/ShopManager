@@ -21,10 +21,20 @@
         <put-attribute name="footer" value="/layout/footer.jsp" />
     </definition>
     
+    <definition name="/shop.index.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Register - ShopManager" />
+        <put-attribute name="related" value="/layout/related.jsp" />
+        <put-attribute name="body" value="/index.jsp" />
+    </definition>
     <definition name="/account.login.tiles" extends="baseLayout">
         <put-attribute name="title" value="Login - ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/login.jsp" />
+    </definition>
+    <definition name="/account.register.tiles" extends="baseLayout">
+        <put-attribute name="title" value="Register - ShopManager" />
+        <put-attribute name="related" value="/layout/related.jsp" />
+        <put-attribute name="body" value="/register.jsp" />
     </definition>
     
 </tiles-definitions>
