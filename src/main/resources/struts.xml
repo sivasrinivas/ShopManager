@@ -7,27 +7,34 @@
 
 	<package name="default" extends="struts-default" namespace="/">
 		<result-types>
-			<result-type name="tiles"
-				class="org.apache.struts2.views.tiles.TilesResult" />
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		<action name="welcome" class="com.sivasrinivas.ShopManager.action.App">
-			<result name="success">/index.jsp</result>
-		</action>
-
-		<action name="Account_*" class="com.sivasrinivas.ShopManager.action.AccountAction" method="{1}">
-			<result name="loginsuccess">/index.jsp</result>
-			<result name="loginfail" type="tiles">/account.login.tiles</result>
-			<result name="success" type="tiles">/shop.index.tiles</result>
-			<result name="regform" type="tiles">/account.register.tiles</result>
+		<action name="welcome">
+			<result>/index.jsp</result>
 		</action>
 	</package>
 	
 	<package name="user" extends="struts-default" namespace="/user">
-		<action name="login" class="com.sivasrinivas.ShopManager.LoginAction">
-			<result name="login" type="tiles">/user.login.tiles</result>
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="login">
+			<result type="tiles">/user.login.tiles</result>
 		</action>
-		<action name="Login_*" class="com.sivasrinivas.ShopManager.LoginAction" method="{1}">
-			<result name="login" type="tiles">/user.login.tiles</result>
+		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.user.LoginAction" method="{1}">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	<!-- Admin related tasks -->
+	<package name="admin" extends="struts-default" namespace="/admin">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
+		</result-types>
+		<action name="login">
+			<result type="tiles">/admin.login.tiles</result>
+		</action>
+		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.admin.AdminLoginAction" method="{1}">
+			<result name="success">/index.jsp</result>
 		</action>
 	</package>
 

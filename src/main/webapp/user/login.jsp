@@ -4,8 +4,8 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-	<s:form id="loginForm" action="Account_login" cssClass="form-horizontal">
-		<div class="control-group">
+	<s:form id="loginForm" action="/user/Login_login" cssClass="form-horizontal">
+		<%-- <div class="control-group">
 			<label class="control-label">User Id:</label>
 			<div class="controls">
 				<s:textfield id="userId" name="user.userId" placeholder="User Id"/>
@@ -24,5 +24,10 @@
 				</label>
 				<button type="submit" class="btn">Sign in</button>
 			</div>
-		</div>
+		</div> --%>
+		
+		<s:textfield id="emailId" name="emailId" label="Email Id" />
+		<s:password id="password" name="password" label="Password" />
+		<s:submit />
+		
 	</s:form>

@@ -1,4 +1,4 @@
-package com.sivasrinivas.ShopManager.action.user;
+package com.sivasrinivas.ShopManager.action.admin;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.sivasrinivas.ShopManager.service.LoginService;
 
-public class LoginAction extends ActionSupport{
+public class AdminLoginAction extends ActionSupport{
 	/**
 	 * generated version id of the class
 	 */

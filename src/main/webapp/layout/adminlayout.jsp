@@ -7,8 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript" src="/ShopManager/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/ShopManager/assets/js/bootstrap.js"></script>
-<link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
+<link rel="stylesheet" media="screen"
+	href="/ShopManager/assets/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen"
+	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
 <link rel="stylesheet" href="assets/css/basic.css"></link>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
@@ -20,11 +22,6 @@
 				<tiles:insertAttribute name="header" />
 			</div>
 			<div id="main-container" class="row">
-				<div class="span3">
-					<tiles:insertAttribute name="sidebar" />
-					<br>
-					<tiles:insertAttribute name="related" />
-				</div>
 				<div class="span9 center">
 					<tiles:insertAttribute name="body" />
 				</div>

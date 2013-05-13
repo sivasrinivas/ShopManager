@@ -21,5 +21,5 @@
 	</s:form>
 </div>
 <div class="span3">
-	<s:a href="#">Login</s:a>
+	<s:a href="/ShopManager/user/login">Login</s:a>
 </div>
