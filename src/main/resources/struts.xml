@@ -36,6 +36,9 @@
 		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.admin.AdminLoginAction" method="{1}">
 			<result name="success">/index.jsp</result>
 		</action>
+		<action name="Category_*" class="com.sivasrinivas.ShopManager.action.admin.CategoryAction" method="{1}">
+			<result name="addCategorySetup" type="tiles">/admin.category.addsetup.tiles</result>
+		</action>
 	</package>
 
 </struts>

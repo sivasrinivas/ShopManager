@@ -53,5 +53,10 @@
         <put-attribute name="title" value="Admin Login - ShopManager" />
         <put-attribute name="body" value="/admin/login.jsp" />
     </definition>
+    <definition name="/admin.category.addsetup.tiles" extends="adminLayout">
+        <put-attribute name="title" value="Add Category - ShopManager" />
+        <put-attribute name="body" value="/admin/addcategorysetup.jsp" />
+    </definition>
+    
     
 </tiles-definitions>

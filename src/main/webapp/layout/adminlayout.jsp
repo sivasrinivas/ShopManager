@@ -10,7 +10,7 @@
 <link rel="stylesheet" media="screen" type="text/css"	href="/ShopManager/assets/css/bootstrap.css"></link>
 <link rel="stylesheet" media="screen" type="text/css"	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
-<link rel="stylesheet" href="assets/css/basic.css"></link>
+<link rel="stylesheet" href="/ShopManager/assets/css/basic.css"></link>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
