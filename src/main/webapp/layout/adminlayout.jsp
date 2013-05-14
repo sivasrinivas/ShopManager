@@ -7,30 +7,27 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <script type="text/javascript" src="/ShopManager/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/ShopManager/assets/js/bootstrap.js"></script>
-<link rel="stylesheet" media="screen"
-	href="/ShopManager/assets/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen"
-	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
+<link rel="stylesheet" media="screen" type="text/css"	href="/ShopManager/assets/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen" type="text/css"	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
 <link rel="stylesheet" href="assets/css/basic.css"></link>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
-	<div class="container">
+	<div id="main-wrapper" class="container">
 		<div class="row">
-			<div class="row">
-				<tiles:insertAttribute name="header" />
-			</div>
-			<div id="main-container" class="row">
-				<div class="span9 center">
+			<div class="span12">
+				<div id="main-header">
+					<tiles:insertAttribute name="header" />
+				</div>
+				<div id="main-container">
 					<tiles:insertAttribute name="body" />
 				</div>
-			</div>
-			<div class="row">
-				<tiles:insertAttribute name="footer" />
+				<div id="main-footer">
+					<tiles:insertAttribute name="footer" />
+				</div>
 			</div>
 		</div>
 	</div>
-
 </body>
 </html>

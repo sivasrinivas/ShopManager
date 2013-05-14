@@ -24,7 +24,7 @@
     <!-- Layour for admin actions -->
     <definition name="adminLayout" template="/layout/adminlayout.jsp">
     	<put-attribute name="title" value="" />
-    	<put-attribute name="header" value="/layout/header.jsp" />
+    	<put-attribute name="header" value="/layout/adminheader.jsp" />
         <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/layout/footer.jsp" />
     </definition>
@@ -51,7 +51,7 @@
     </definition>
     <definition name="/admin.login.tiles" extends="adminLayout">
         <put-attribute name="title" value="Admin Login - ShopManager" />
-        <put-attribute name="body" value="/user/login.jsp" />
+        <put-attribute name="body" value="/admin/login.jsp" />
     </definition>
     
 </tiles-definitions>
