@@ -38,6 +38,7 @@
 		</action>
 		<action name="Category_*" class="com.sivasrinivas.ShopManager.action.admin.CategoryAction" method="{1}">
 			<result name="addCategorySetup" type="tiles">/admin.category.addsetup.tiles</result>
+			<result name="success">/index.jsp</result>
 		</action>
 	</package>
 
