@@ -1,9 +1,10 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib prefix="display" uri="http://displaytag.sf.net" %>
 <div class="page-header">
 <h2>Add Category</h2>
 </div>
 
-<s:form action="Category_addCategory" id="addCategoryForm"	theme="simple" cssClass="form-horizontal">
+<s:form action="Category_addCategory" id="addCategoryForm"	theme="simple" cssClass="form-horizontal pull-left">
 	<div class="control-group">
 		<label class="control-label"><s:text name="Name"></s:text></label>
 		<div class="controls">
@@ -25,6 +26,15 @@
 		</div>
 	</div>
 </s:form>
+
+<div class="span3 well pull-right">
+	<display:table uid="categoryTable" name="categoryList" id="row" class="table table-striped table-bordered table-condensed">
+		<display:caption><strong>Category List</strong></display:caption>
+		<display:column title="Id" property="id"></display:column>
+		<display:column title="Name" property="name"></display:column>
+	</display:table>	
+
+</div>
 
 <script type="text/javascript">
 $(document).ready(function (){

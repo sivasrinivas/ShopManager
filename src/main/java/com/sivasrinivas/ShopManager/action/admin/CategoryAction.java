@@ -3,14 +3,14 @@
  */
 package com.sivasrinivas.ShopManager.action.admin;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.Collection;
+
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.sivasrinivas.ShopManager.model.CategoryModel;
 import com.sivasrinivas.ShopManager.service.CategoryService;
-import com.sivasrinivas.ShopManager.service.LoginService;
 
 /**
  * @author Siva
@@ -22,10 +22,33 @@ public class CategoryAction extends ActionSupport{
 	 * Generated serial version UID
 	 */
 	private static final long serialVersionUID = -7015399379262262506L;
-//	private ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-//	private CategoryService categoryService = (CategoryService) context.getBean("CategoryService");
+	/* getting application context and then mongoOperations*/
+	ApplicationContext ctx = new GenericXmlApplicationContext("spring.xml");
+	CategoryService categoryService = (CategoryService)ctx.getBean("CategoryService");
+
 	private CategoryModel category;
+	private Collection<CategoryModel> categoryList;
 	
+	
+	/**
+	 *default return to setup add category form page 
+	 * @return
+	 */
+	public String addCategorySetup(){
+		categoryList = categoryService.getCategoryList();
+		System.out.println(categoryList.size());
+		return "addCategorySetup";
+	}
+	
+	public String addCategory(){
+			categoryService.addCategory(category);
+			System.out.println("Category added successfully.");
+			addActionMessage("Category added successfully.");
+			addCategorySetup();
+		return SUCCESS;
+	}
+	
+	//Getters and Setters
 	/**
 	 * @return the category
 	 */
@@ -42,18 +65,15 @@ public class CategoryAction extends ActionSupport{
 		return SUCCESS;
 	}
 	/**
-	 *default return to setup add category form page 
-	 * @return
+	 * @return the categoryList
 	 */
-	public String addCategorySetup(){
-		return "addCategorySetup";
+	public Collection<CategoryModel> getCategoryList() {
+		return categoryList;
 	}
-	
-	public String addCategory(){
-		
-//			categoryService.addCategory(category);
-			System.out.println("Category added successfully.");
-			addActionMessage("Category added successfully.");
-		return SUCCESS;
+	/**
+	 * @param categoryList the categoryList to set
+	 */
+	public void setCategoryList(Collection<CategoryModel> categoryList) {
+		this.categoryList = categoryList;
 	}
 }

@@ -6,12 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Shop Manager</title>
-<script type="text/javascript" src="/ShopManager/res/js/jquery.js"></script>
-<script type="text/javascript" src="/ShopManager/res/js/bootstrap.js"></script>
+<script type="text/javascript" src="/ShopManager/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/ShopManager/assets/js/bootstrap.js"></script>
 <link rel="stylesheet" media="screen"
-	href="/ShopManager/res/css/bootstrap.css"></link>
+	href="/ShopManager/assets/css/bootstrap.css"></link>
 <link rel="stylesheet" media="screen"
-	href="/ShopManager/res/css/bootstrap-responsive.css"></link>
+	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
 </head>
 <body>
 
@@ -29,7 +29,7 @@
 				
 			<div class="span9">
 			
-			<img src="/ShopManager/res/img/download.png" class="img-polaroid">
+			<button type="submit" class="btn btn-primary"><i class="icon-plus icon-white"></i> Icon</button>
 			
 			</div>
 		</div>

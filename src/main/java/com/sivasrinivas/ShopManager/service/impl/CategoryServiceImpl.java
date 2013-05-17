@@ -1,11 +1,7 @@
 package com.sivasrinivas.ShopManager.service.impl;
 import java.util.Collection;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.sivasrinivas.ShopManager.model.CategoryModel;
@@ -13,8 +9,8 @@ import com.sivasrinivas.ShopManager.service.CategoryService;
 
 @Repository
 public class CategoryServiceImpl implements CategoryService{
-	private ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-	private MongoOperations mongoTemplate = (MongoOperations) context.getBean("mongoTemplate");
+	
+	private MongoOperations mongoTemplate;
 	public static final String COLLECTION = "category";
 	/**
 	 * adds a new category to the Category collection
@@ -24,6 +20,7 @@ public class CategoryServiceImpl implements CategoryService{
 		if(!mongoTemplate.collectionExists(CategoryModel.class))
 			mongoTemplate.createCollection(CategoryModel.class);
 		mongoTemplate.insert(category, COLLECTION);
+		System.out.println("addCategory called");
 	}
 	
 	/**
@@ -46,6 +43,21 @@ public class CategoryServiceImpl implements CategoryService{
 	@Override
 	public Collection<CategoryModel> getCategoryList() {
 		return mongoTemplate.findAll(CategoryModel.class, COLLECTION) ;
+	}
+
+	//Getters and Setters
+	/**
+	 * @return the mongoTemplate
+	 */
+	public MongoOperations getMongoTemplate() {
+		return mongoTemplate;
+	}
+
+	/**
+	 * @param mongoTemplate the mongoTemplate to set
+	 */
+	public void setMongoTemplate(MongoOperations mongoTemplate) {
+		this.mongoTemplate = mongoTemplate;
 	}
 
 }

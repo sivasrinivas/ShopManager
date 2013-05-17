@@ -82,6 +82,11 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.0-beta5</version>
 		</dependency>
+		<dependency>
+  			<groupId>org.slf4j</groupId>
+  			<artifactId>slf4j-log4j12</artifactId>
+  			<version>1.7.5</version>
+		</dependency>
 		<!-- needed to compile log4j classes -->
 		<dependency>
 			<groupId>com.sun</groupId>
@@ -99,6 +104,17 @@
 			<scope>system</scope>
 			<systemPath>C:\Program Files\Java\jdk1.7.0_02\lib\tools.jar</systemPath>
 		</dependency>
+	<!-- display tag dependencies -->
+	<dependency>
+		<groupId>displaytag</groupId>
+		<artifactId>displaytag</artifactId>
+		<version>1.1.1</version>
+	</dependency>
+	<dependency>
+		<groupId>displaytag</groupId>
+		<artifactId>displaytag-export-poi</artifactId>
+		<version>1.1.1</version>
+	</dependency>
 
 	</dependencies>
 
