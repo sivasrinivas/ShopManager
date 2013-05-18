@@ -5,17 +5,28 @@ import java.util.Collection;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document
+import com.mongodb.BasicDBObject;
+
+@Document(collection = "category")
 public class CategoryModel {
 
 	/**
 	 * Attributes of the Category Model object
 	 */
 	@Id
-	private long id;
+	private String id;
 	private String name;
 	private String description;
 	private Collection<String> subCategories;
+	
+	public BasicDBObject toBasicDBObject(){
+		BasicDBObject document = new BasicDBObject();
+		document.put("id", getId());
+		document.put("name", getName());
+		document.put("description", getDescription());
+		document.put("subCategories", getSubCategories());
+		return document;
+	}
 	
 	/**
 	 * Getters and Setters
@@ -23,13 +34,13 @@ public class CategoryModel {
 	/**
 	 * @return the id
 	 */
-	public long getId() {
+	public String getId() {
 		return id;
 	}
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	/**

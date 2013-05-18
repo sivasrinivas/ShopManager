@@ -27,11 +27,12 @@
 	</div>
 </s:form>
 
-<div class="span3 well pull-right">
+<div>
 	<display:table uid="categoryTable" name="categoryList" id="row" class="table table-striped table-bordered table-condensed">
 		<display:caption><strong>Category List</strong></display:caption>
 		<display:column title="Id" property="id"></display:column>
 		<display:column title="Name" property="name"></display:column>
+		<display:column title="Description" property="description"></display:column>
 	</display:table>	
 
 </div>

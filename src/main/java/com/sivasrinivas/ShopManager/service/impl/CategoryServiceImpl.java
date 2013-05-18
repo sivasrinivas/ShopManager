@@ -1,6 +1,8 @@
 package com.sivasrinivas.ShopManager.service.impl;
 import java.util.Collection;
+import java.util.UUID;
 
+import org.apache.log4j.Logger;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Repository;
 
@@ -9,18 +11,18 @@ import com.sivasrinivas.ShopManager.service.CategoryService;
 
 @Repository
 public class CategoryServiceImpl implements CategoryService{
+	static Logger logger = Logger.getLogger(CategoryServiceImpl.class);
 	
-	private MongoOperations mongoTemplate;
+	private MongoOperations mongoOperations;
 	public static final String COLLECTION = "category";
 	/**
 	 * adds a new category to the Category collection
 	 */
 	@Override
 	public void addCategory(CategoryModel category) {
-		if(!mongoTemplate.collectionExists(CategoryModel.class))
-			mongoTemplate.createCollection(CategoryModel.class);
-		mongoTemplate.insert(category, COLLECTION);
-		System.out.println("addCategory called");
+		logger.info("adding a category to collection category.");
+		category.setId(UUID.randomUUID().toString());
+		mongoOperations.insert(category);
 	}
 	
 	/**
@@ -28,21 +30,21 @@ public class CategoryServiceImpl implements CategoryService{
 	 */
 	@Override
 	public void updateCategory(CategoryModel category) {
-		mongoTemplate.insert(category, COLLECTION);
+		mongoOperations.insert(category, COLLECTION);
 	}
 	/**
 	 * delete existing category
 	 */
 	@Override
 	public void deleteCategory(CategoryModel category) {
-		mongoTemplate.remove(category);
+		mongoOperations.remove(category);
 	}
 	/**
 	 * gets all existing categories list
 	 */
 	@Override
 	public Collection<CategoryModel> getCategoryList() {
-		return mongoTemplate.findAll(CategoryModel.class, COLLECTION) ;
+		return mongoOperations.findAll(CategoryModel.class);
 	}
 
 	//Getters and Setters
@@ -50,14 +52,14 @@ public class CategoryServiceImpl implements CategoryService{
 	 * @return the mongoTemplate
 	 */
 	public MongoOperations getMongoTemplate() {
-		return mongoTemplate;
+		return mongoOperations;
 	}
 
 	/**
 	 * @param mongoTemplate the mongoTemplate to set
 	 */
 	public void setMongoTemplate(MongoOperations mongoTemplate) {
-		this.mongoTemplate = mongoTemplate;
+		this.mongoOperations = mongoTemplate;
 	}
 
 }

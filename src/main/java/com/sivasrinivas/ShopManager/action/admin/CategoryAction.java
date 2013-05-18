@@ -5,6 +5,7 @@ package com.sivasrinivas.ShopManager.action.admin;
 
 import java.util.Collection;
 
+import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
@@ -17,6 +18,7 @@ import com.sivasrinivas.ShopManager.service.CategoryService;
  *
  */
 public class CategoryAction extends ActionSupport{
+	static Logger logger = Logger.getLogger(CategoryAction.class);
 
 	/**
 	 * Generated serial version UID
@@ -35,16 +37,15 @@ public class CategoryAction extends ActionSupport{
 	 * @return
 	 */
 	public String addCategorySetup(){
+		logger.trace("getting existing category list.");
 		categoryList = categoryService.getCategoryList();
-		System.out.println(categoryList.size());
 		return "addCategorySetup";
 	}
 	
 	public String addCategory(){
-			categoryService.addCategory(category);
-			System.out.println("Category added successfully.");
-			addActionMessage("Category added successfully.");
-			addCategorySetup();
+		logger.trace("addCategory action method called.");
+		categoryService.addCategory(category);
+		addCategorySetup();
 		return SUCCESS;
 	}
 	
