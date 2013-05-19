@@ -18,16 +18,14 @@
 <body>
 	<div id="main-wrapper" class="container">
 		<div class="row">
-			<div class="span12">
-				<div id="main-header" class="span12">
-					<tiles:insertAttribute name="header" />
-				</div>
-				<div id="main-container" class="span12">
-					<tiles:insertAttribute name="body" />
-				</div>
-				<div id="main-footer" class="span12">
-					<tiles:insertAttribute name="footer" />
-				</div>
+			<div id="main-header">
+				<tiles:insertAttribute name="header" />
+			</div>
+			<div id="main-container">
+				<tiles:insertAttribute name="body" />
+			</div>
+			<div id="main-footer">
+				<tiles:insertAttribute name="footer" />
 			</div>
 		</div>
 	</div>

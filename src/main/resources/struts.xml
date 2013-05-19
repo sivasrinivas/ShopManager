@@ -9,8 +9,9 @@
 		<result-types>
 			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		<action name="welcome">
-			<result>/index.jsp</result>
+		<!-- default action for index.jsp page -->
+		<action name="">
+			<result type="tiles">/index.tiles</result>
 		</action>
 	</package>
 	

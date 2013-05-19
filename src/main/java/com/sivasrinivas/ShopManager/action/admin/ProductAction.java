@@ -31,6 +31,7 @@ public class ProductAction extends ActionSupport{
 	}
 	
 	public String insertProduct(){
+		System.out.println("AddProduct action called.");
 		String result = "insertProduct";
 		productService.insertProduct(product);
 		return result;
