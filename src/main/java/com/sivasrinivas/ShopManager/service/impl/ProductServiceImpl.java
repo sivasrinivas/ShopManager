@@ -1,23 +1,28 @@
 package com.sivasrinivas.ShopManager.service.impl;
 
 import java.util.Collection;
+import java.util.UUID;
 
 import org.apache.log4j.Logger;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoOperations;
-import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Repository;
 
 import com.sivasrinivas.ShopManager.model.ProductModel;
 import com.sivasrinivas.ShopManager.service.ProductService;
 
+@Repository
 public class ProductServiceImpl implements ProductService{
 	static Logger logger = Logger.getLogger(ProductServiceImpl.class) ;
-	private MongoTemplate mongoTemplate;
-	private MongoOperations mongoOperations;
+
+	ApplicationContext ctx = new GenericXmlApplicationContext("spring.xml");
+	private MongoOperations mongoOperations = (MongoOperations)ctx.getBean("mongoTemplate");
 	
 	@Override
 	public void insertProduct(ProductModel product) {
 		logger.info("Inserting product into product collection.");
-		//mongoTemplate.insert(product);
+		product.setSKU(UUID.randomUUID().toString());
 		mongoOperations.insert(product);
 	}
 
@@ -51,15 +56,15 @@ public class ProductServiceImpl implements ProductService{
 	/**
 	 * @return the mongoTemplate
 	 */
-	public MongoTemplate getMongoTemplate() {
-		return mongoTemplate;
+	public MongoOperations getMongoTemplate() {
+		return mongoOperations;
 	}
 
 	/**
 	 * @param mongoTemplate the mongoTemplate to set
 	 */
-	public void setMongoTemplate(MongoTemplate mongoTemplate) {
-		this.mongoTemplate = mongoTemplate;
+	public void setMongoTemplate(MongoOperations mongoOperations) {
+		this.mongoOperations = mongoOperations;
 	}
 
 }

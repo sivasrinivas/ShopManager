@@ -14,7 +14,6 @@ public class CategoryServiceImpl implements CategoryService{
 	static Logger logger = Logger.getLogger(CategoryServiceImpl.class);
 	
 	private MongoOperations mongoOperations;
-	public static final String COLLECTION = "category";
 	/**
 	 * adds a new category to the Category collection
 	 */
@@ -30,7 +29,7 @@ public class CategoryServiceImpl implements CategoryService{
 	 */
 	@Override
 	public void updateCategory(CategoryModel category) {
-		mongoOperations.insert(category, COLLECTION);
+		mongoOperations.save(category);
 	}
 	/**
 	 * delete existing category
@@ -58,8 +57,8 @@ public class CategoryServiceImpl implements CategoryService{
 	/**
 	 * @param mongoTemplate the mongoTemplate to set
 	 */
-	public void setMongoTemplate(MongoOperations mongoTemplate) {
-		this.mongoOperations = mongoTemplate;
+	public void setMongoTemplate(MongoOperations mongoOperations) {
+		this.mongoOperations = mongoOperations;
 	}
 
 }

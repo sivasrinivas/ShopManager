@@ -2,12 +2,14 @@ package com.sivasrinivas.ShopManager.model;
 
 import java.math.BigDecimal;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="product")
 public class ProductModel {
 	//attributes of product model object
-	private long SKU;
+	@Id
+	private String SKU;
 	private String name;
 	private BigDecimal price;
 	private BigDecimal discPrice;
@@ -19,14 +21,14 @@ public class ProductModel {
 	/**
 	 * @return the sKU
 	 */
-	public long getSKU() {
+	public String getSKU() {
 		return SKU;
 	}
 	/**
 	 * @param sKU the sKU to set
 	 */
-	public void setSKU(long sKU) {
-		SKU = sKU;
+	public void setSKU(String SKU) {
+		this.SKU = SKU;
 	}
 	/**
 	 * @return the name
