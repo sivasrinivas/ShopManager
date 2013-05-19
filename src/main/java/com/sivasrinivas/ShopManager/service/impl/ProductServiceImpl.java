@@ -4,8 +4,6 @@ import java.util.Collection;
 import java.util.UUID;
 
 import org.apache.log4j.Logger;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Repository;
 
@@ -15,13 +13,16 @@ import com.sivasrinivas.ShopManager.service.ProductService;
 @Repository
 public class ProductServiceImpl implements ProductService{
 	static Logger logger = Logger.getLogger(ProductServiceImpl.class) ;
-
-	ApplicationContext ctx = new GenericXmlApplicationContext("spring.xml");
-	private MongoOperations mongoOperations = (MongoOperations)ctx.getBean("mongoTemplate");
+	private MongoOperations mongoOperations;
 	
+	/*
+	 * Adds a product to the product collection
+	 * @see com.sivasrinivas.ShopManager.service.ProductService#insertProduct(com.sivasrinivas.ShopManager.model.ProductModel)
+	 */
 	@Override
 	public void insertProduct(ProductModel product) {
 		logger.info("Inserting product into product collection.");
+		System.out.println("inserting product into collection");
 		product.setSKU(UUID.randomUUID().toString());
 		mongoOperations.insert(product);
 	}
@@ -46,8 +47,8 @@ public class ProductServiceImpl implements ProductService{
 
 	@Override
 	public Collection<ProductModel> getProcutList() {
-		// TODO Auto-generated method stub
-		return null;
+		Collection<ProductModel> collection = mongoOperations.findAll(ProductModel.class);
+		return collection;
 	}
 
 	/*

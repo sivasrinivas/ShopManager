@@ -6,18 +6,20 @@
 
 <s:form action="Product_insertProduct" id="addProductForm"	theme="simple" cssClass="form-horizontal pull-left">
 	<div class="control-group">
-		<label class="control-label"><s:text name="Name"></s:text></label>
+		<label class="control-label"><s:text name="Name:"></s:text></label>
 		<div class="controls">
-			<s:textfield name="category.name" id="categoryName" />
+			<s:textfield name="product.name" id="productName" />
 		</div>
 		<br /> 
-		<label class="control-label"><s:text name="Description"></s:text></label>
+		<label class="control-label">
+			<s:text name="Price:"></s:text>
+		</label>
 		<div class="controls">
-			<s:textarea name="category.description" id="categoryDescription" />
+			<s:textfield name="product.price" id="productPrice" />
 		</div>
 		<br>
 		<div class="controls">
-			<s:submit type="button" id="addCategoryBtn" value="Add"	cssClass="btn btn-primary" />
+			<s:submit type="button" id="addProductBtn" value="Add"	cssClass="btn btn-primary" />
 			<input type="reset" id="resetBtn" value="Reset"	class="btn" />
 		</div>
 	</div>
