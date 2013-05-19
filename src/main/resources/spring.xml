@@ -20,5 +20,7 @@
 	<bean id="CategoryService" class="com.sivasrinivas.ShopManager.service.impl.CategoryServiceImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
-     
+    <bean id="ProductService" class="com.sivasrinivas.ShopManager.service.impl.ProductServiceImpl">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
 </beans>

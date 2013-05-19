@@ -5,10 +5,11 @@
 		<ul class="nav">
 			<li><a href="#"><b>Home</b></a></li>
 			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#"> Categories<b class="caret"></b>
+				data-toggle="dropdown" href="#"> Products<b class="caret"></b>
 			</a>
 				<ul class="dropdown-menu">
-					<li><a href="/ShopManager/admin/Category_addCategorySetup">Products</a></li>
+					<li><a href="/ShopManager/admin/Product_addProduct.action">Add Product</a></li>
+					<li><a href="/ShopManager/admin/Category_addCategorySetup.action">Add Category</a></li>
 					<li><a href="#">Category 2</a></li>
 					<li><a href="#">Category 3</a></li>
 					<li><a href="#">Category 4</a></li>

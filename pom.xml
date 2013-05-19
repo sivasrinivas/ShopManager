@@ -58,6 +58,13 @@
 			<artifactId>struts2-core</artifactId>
 			<version>2.3.1.2</version>
 		</dependency>
+		
+		<!-- Google gson dependency for json objects -->
+		<dependency>
+  			<groupId>com.google.code.gson</groupId>
+  			<artifactId>gson</artifactId>
+  			<version>2.2.3</version>
+		</dependency>
 		<!-- Spring 3 dependencies -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -104,17 +111,17 @@
 			<scope>system</scope>
 			<systemPath>C:\Program Files\Java\jdk1.7.0_02\lib\tools.jar</systemPath>
 		</dependency>
-	<!-- display tag dependencies -->
-	<dependency>
-		<groupId>displaytag</groupId>
-		<artifactId>displaytag</artifactId>
-		<version>1.1.1</version>
-	</dependency>
-	<dependency>
-		<groupId>displaytag</groupId>
-		<artifactId>displaytag-export-poi</artifactId>
-		<version>1.1.1</version>
-	</dependency>
+		<!-- display tag dependencies -->
+		<dependency>
+			<groupId>displaytag</groupId>
+			<artifactId>displaytag</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>displaytag</groupId>
+			<artifactId>displaytag-export-poi</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 
 	</dependencies>
 

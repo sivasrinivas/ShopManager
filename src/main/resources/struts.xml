@@ -40,6 +40,10 @@
 			<result name="addCategorySetup" type="tiles">/admin.category.addsetup.tiles</result>
 			<result name="success" type="tiles">/admin.category.addsetup.tiles</result>
 		</action>
+		<action name="Product_*" class="com.sivasrinivas.ShopManager.action.admin.ProductAction" method="{1}">
+			<result name="addProduct" type="tiles">/product.addproduct.tiles</result>
+			<result name="insertProduct" type="tiles">/product.addproduct.tiles</result>
+		</action>
 	</package>
 
 </struts>
