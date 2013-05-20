@@ -8,16 +8,16 @@
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="active item">
-    	<img alt="Img 0" src="/ShopManager/assets/img/0.jpg"></img>
+    	<img alt="Img 0" src="./assets/img/0.jpg"></img>
     </div>
     <div class="item">
-    	<img alt="Img 1" src="/ShopManager/assets/img/1.jpg"></img>
+    	<img alt="Img 1" src="./assets/img/1.jpg"></img>
     </div>
     <div class="item">
-    	<img alt="Img 2" src="/ShopManager/assets/img/2.jpg"></img>
+    	<img alt="Img 2" src="./assets/img/2.jpg"></img>
     </div>
     <div class="item">
-    	<img alt="Img 3" src="/ShopManager/assets/img/3.jpg"></img>
+    	<img alt="Img 3" src="./assets/img/3.jpg"></img>
     </div>
   </div>
   <!-- Carousel nav -->

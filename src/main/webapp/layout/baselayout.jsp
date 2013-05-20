@@ -5,12 +5,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script type="text/javascript" src="/ShopManager/assets/js/jquery.js"></script>
-<script type="text/javascript" src="/ShopManager/assets/js/bootstrap.js"></script>
-<link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen"	href="/ShopManager/assets/css/bootstrap-responsive.css"></link>
+<script type="text/javascript" src="./assets/js/jquery.js"></script>
+<script type="text/javascript" src="./assets/js/bootstrap.js"></script>
+<link rel="stylesheet" media="screen"	href="./assets/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen"	href="./assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
-<link rel="stylesheet" href="assets/css/basic.css"></link>
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
