@@ -25,29 +25,63 @@
 <!-- Login Mdoal -->
 <div id="loginModal" class="modal hide fade in" tabindex="-1" role="dialog" 
 	aria-labelledby="loginModalLabel" area-hidden="true">
-	<div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times</button>
-    	<h3 id="myModalLabel">Modal header</h3>
-	</div>
+	<!--  <div class="modal-header"></div> -->
 	<div class="modal-body">
-		<s:form id="loginForm" cssClass="form-horizontal">
-			<div class="control-group">
-				<label class="control-label">Email Id:</label>
-				<div class="controls">
-					<s:textfield id="emailId" name="user.emailId"></s:textfield>
-				</div>
-				<label class="control-label">Password:</label>
-				<div class="controls">
-					<s:password id="password" name="user.password"></s:password>
-				</div>
-			</div>
-		</s:form>
-		
+	<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times</button>
+	<!-- Login section and Signup section -->
+		<div class="tabbable">
+	  		<ul class="nav nav-tabs">
+	    		<li class="active"><a href="#tab1" data-toggle="tab">Login</a></li>
+	    		<li><a href="#tab2" data-toggle="tab">Sign Up</a></li>
+	  		</ul>
+	  		<div class="tab-content">
+	    		<div class="tab-pane active" id="tab1">
+				      <s:form id="loginForm" action="user/login" theme="simple" cssClass="form-horizontal">
+						<div class="control-group">
+							<label class="control-label">Email Id:</label>
+							<div class="controls">
+								<s:textfield id="emailId" name="user.emailId"></s:textfield>
+							</div><br>
+							<label class="control-label">Password:</label>
+							<div class="controls">
+								<s:password id="password" name="user.password"></s:password>
+							</div>
+							<br>
+							<div class="controls">
+								<s:submit value="Login" cssClass="btn btn-primary"/>
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+							</div>
+						</div>
+					</s:form>
+	    		</div>
+	    		<div class="tab-pane" id="tab2">
+	      			<s:form id="signupForm" action="user/signup" theme="simple" cssClass="form-horizontal">
+						<div class="control-group">
+							<label class="control-label">Email Id:</label>
+							<div class="controls">
+								<s:textfield id="emailId" name="user.emailId"></s:textfield>
+							</div><br>
+							<label class="control-label">Password:</label>
+							<div class="controls">
+								<s:password id="password" name="user.password"></s:password>
+							</div>
+							<br>
+							<label class="control-label">Confirm Password:</label>
+							<div class="controls">
+								<s:password id="password" name="confPassword"></s:password>
+							</div>
+							<br>
+							<div class="controls">
+								<s:submit value="Sign Up" cssClass="btn btn-primary"/>
+								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+							</div>
+						</div>
+					</s:form>
+	    		</div>
+	  		</div>
+		</div>
 	</div>
-	<div class="modal-footer">
-		<button class="btn btn-primary">Login</button>
-		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-	</div>
+	<!-- <div class="modal-footer">	</div> -->
 </div>
 <br><br><br><br>
 <!-- Fork me on github ribbon -->
