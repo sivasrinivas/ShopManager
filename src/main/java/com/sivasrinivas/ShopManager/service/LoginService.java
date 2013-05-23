@@ -1,11 +1,9 @@
 package com.sivasrinivas.ShopManager.service;
 
-public class LoginService {
+import com.sivasrinivas.ShopManager.model.UserModel;
 
-	public boolean validate(String emailId, String password){
-		System.out.println(emailId);
-		System.out.println(password);
-		return true;
-	}
+public interface LoginService {
+
+	public boolean verifyPassword(UserModel user);
 	
 }

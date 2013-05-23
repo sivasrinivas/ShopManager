@@ -1,5 +1,6 @@
 package com.sivasrinivas.ShopManager.model;
 
+import java.math.BigInteger;
 import java.util.Map;
 import java.util.Set;
 
@@ -7,25 +8,20 @@ import org.bson.BSONObject;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection= "users")
+@Document(collection= "user")
 public class UserModel {
 	
-	@Id
-	private String id;
-	private String firstName;
-	private String lastName;
-	private long uid;
-	private String userId;
-	private String emailId;
-	private String password;
+	@Id 
+	BigInteger id;
+	String firstName;
+	String middleName;
+	String lastName;
+	String userId;
+	String emailId;
+	String password;
+	String phoneNumber;
 	
-	public long getUid() {
-		return uid;
-	}
-	public void setUid(long uid) {
-		this.uid = uid;
-	}
-	public void setId(String id) {
+	public void setId(BigInteger id) {
 		this.id = id;
 	}
 	public String getFirstName() {
@@ -58,6 +54,36 @@ public class UserModel {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	/**
+	 * @return the middleName
+	 */
+	public String getMiddleName() {
+		return middleName;
+	}
+	/**
+	 * @param middleName the middleName to set
+	 */
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	/**
+	 * @return the phoneNumber
+	 */
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	/**
+	 * @param phoneNumber the phoneNumber to set
+	 */
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	/**
+	 * @return the id
+	 */
+	public BigInteger getId() {
+		return id;
 	}
 	public boolean containsField(String arg0) {
 		// TODO Auto-generated method stub

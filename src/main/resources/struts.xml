@@ -23,7 +23,12 @@
 			<result type="tiles">/user.login.tiles</result>
 		</action>
 		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.user.LoginAction" method="{1}">
-			<result name="success">/index.jsp</result>
+			<result name="success" type="tiles">/user.login.tiles</result>
+			<result name="error" type="tiles">//</result>
+		</action>
+		<action name="Signup_*" class="com.sivasrinivas.ShopManager.action.user.SignupAction" method="{1}">
+			<result name="success" type="tiles">/user.login.tiles</result>
+			<result name="error" type="tiles">//</result>
 		</action>
 	</package>
 	<!-- Admin related tasks -->

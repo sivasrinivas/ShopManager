@@ -31,12 +31,16 @@
 	<!-- Login section and Signup section -->
 		<div class="tabbable">
 	  		<ul class="nav nav-tabs">
-	    		<li class="active"><a href="#tab1" data-toggle="tab">Login</a></li>
-	    		<li><a href="#tab2" data-toggle="tab">Sign Up</a></li>
+	    		<li class="active">
+	    			<a href="#login" data-toggle="tab">Login</a>
+	    		</li>
+	    		<li>
+	    			<a href="#signup" data-toggle="tab">Sign Up</a>
+	    		</li>
 	  		</ul>
 	  		<div class="tab-content">
-	    		<div class="tab-pane active" id="tab1">
-				      <s:form id="loginForm" action="user/login" theme="simple" cssClass="form-horizontal">
+	    		<div class="tab-pane active" id="login">
+				      <s:form id="loginForm" action="user/Login_login" theme="simple" cssClass="form-horizontal">
 						<div class="control-group">
 							<label class="control-label">Email Id:</label>
 							<div class="controls">
@@ -48,14 +52,15 @@
 							</div>
 							<br>
 							<div class="controls">
+								<a href="./user/forgot">forgot password?</a>
 								<s:submit value="Login" cssClass="btn btn-primary"/>
 								<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
 							</div>
 						</div>
 					</s:form>
 	    		</div>
-	    		<div class="tab-pane" id="tab2">
-	      			<s:form id="signupForm" action="user/signup" theme="simple" cssClass="form-horizontal">
+	    		<div class="tab-pane" id="signup">
+	      			<s:form id="signupForm" action="user/Signup_createAccount" theme="simple" cssClass="form-horizontal">
 						<div class="control-group">
 							<label class="control-label">Email Id:</label>
 							<div class="controls">
@@ -68,7 +73,7 @@
 							<br>
 							<label class="control-label">Confirm Password:</label>
 							<div class="controls">
-								<s:password id="password" name="confPassword"></s:password>
+								<s:password id="confPassword" name="confPassword"></s:password>
 							</div>
 							<br>
 							<div class="controls">

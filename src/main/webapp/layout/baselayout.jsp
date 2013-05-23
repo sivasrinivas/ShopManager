@@ -5,10 +5,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<script type="text/javascript" src="./assets/js/jquery.js"></script>
-<script type="text/javascript" src="./assets/js/bootstrap.js"></script>
-<link rel="stylesheet" media="screen"	href="./assets/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen"	href="./assets/css/bootstrap-responsive.css"></link>
+<script type="text/javascript" src="/shop/assets/js/jquery.js"></script>
+<script type="text/javascript" src="/shop/assets/js/bootstrap.js"></script>
+<link rel="stylesheet" media="screen"	href="/shop/assets/css/bootstrap.css"></link>
+<link rel="stylesheet" media="screen"	href="/shop/assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
