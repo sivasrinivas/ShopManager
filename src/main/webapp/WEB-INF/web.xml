@@ -11,6 +11,11 @@
     <welcome-file-list>
         <welcome-file>index.action</welcome-file>
     </welcome-file-list>
+    <error-page>
+    	<description></description>
+    	<error-code>404</error-code>
+    	<location>/error/error404.jsp</location>
+    </error-page>
     <!-- struts2 filter definition-->
     <filter>
     	<filter-name>struts2</filter-name>

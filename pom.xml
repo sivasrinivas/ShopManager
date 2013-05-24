@@ -79,6 +79,7 @@
 		</dependency>
 
 		<!-- Log4j dependencies -->
+			<!-- log4j2 components -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -89,11 +90,31 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.0-beta5</version>
 		</dependency>
+			<!-- backward compatibility log4j -->
 		<dependency>
-  			<groupId>org.slf4j</groupId>
-  			<artifactId>slf4j-log4j12</artifactId>
-  			<version>1.7.5</version>
-		</dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-1.2-api</artifactId>
+    		<version>2.0-beta6</version>
+  		</dependency>
+  			<!-- Apache commons logging - jconsole-->
+		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-jcl</artifactId>
+    		<version>2.0-beta6</version>
+  		</dependency>
+  			<!-- slfj -->
+		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-slf4j-impl</artifactId>
+    		<version>2.0-beta6</version>
+  		</dependency>
+  			<!-- tag library to use tags for logging in JSP pages -->
+  		<dependency>
+    		<groupId>org.apache.logging.log4j</groupId>
+    		<artifactId>log4j-taglib</artifactId>
+    		<version>2.0-beta6</version>
+  		</dependency>
+		
 		<!-- needed to compile log4j classes -->
 		<dependency>
 			<groupId>com.sun</groupId>
@@ -103,6 +124,7 @@
 			<type>jar</type>
 			<systemPath>C:\Program Files\Java\jdk1.7.0_02\lib\jconsole.jar</systemPath>
 		</dependency>
+		
 		<!-- Java dependency -->
 		<dependency>
 			<groupId>com.sun</groupId>

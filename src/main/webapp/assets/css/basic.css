@@ -1,8 +1,16 @@
 @CHARSET "ISO-8859-1";
 
-.left{
-	float: left;
+#main-container
+{
+	overflow:auto;
+	padding-bottom:150px; /* this needs to be bigger than footer height*/
 }
-.right{
-	float: right;
-}
+
+.footer 
+{
+	position: relative;
+	margin-top: -150px; /* negative value of footer height */
+	height: 150px;
+	clear:both;
+	padding-top:20px;
+} 

@@ -13,6 +13,7 @@
 <link rel="stylesheet" media="screen" type="text/css"	href="/shop/assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
 <link rel="stylesheet" href="/shop/assets/css/basic.css"></link>
+
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
@@ -24,9 +25,9 @@
 			<div id="main-container">
 				<tiles:insertAttribute name="body" />
 			</div>
-			<div id="main-footer">
+			<footer class="footer span12" id="main-footer">
 				<tiles:insertAttribute name="footer" />
-			</div>
+			</footer>
 		</div>
 	</div>
 </body>

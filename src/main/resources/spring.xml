@@ -25,11 +25,14 @@
 	</bean>
 	<bean id="loginService" class="com.sivasrinivas.ShopManager.service.impl.LoginServiceImpl">
 		<property name="userDAO" ref="userDAO"></property>
+		<property name="adminDAO" ref="adminDAO"></property>
 	</bean>
 	<bean id="userDAO" class="com.sivasrinivas.ShopManager.dao.impl.UserDAOImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
-	
+	<bean id="adminDAO" class="com.sivasrinivas.ShopManager.dao.impl.AdminDAOImpl">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
 	<bean id="CategoryService" class="com.sivasrinivas.ShopManager.service.impl.CategoryServiceImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
