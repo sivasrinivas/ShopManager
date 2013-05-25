@@ -2,12 +2,7 @@
 <div class="page-header">
 	<h3>Login</h3>
 </div>
-<div class="alert alert-error">
-	<s:actionerror/>
-</div>
-<div class="alert alert-success">
-	<s:actionmessage/>
-</div>
+<jsp:include page="/layout/messages.jsp"></jsp:include>
 <s:form id="loginForm" action="/admin/Login_login.action"	theme="simple" cssClass="form-horizontal offset3 well span6">
 	<div class="control-group">
 		<label class="control-label">Email Id:</label>

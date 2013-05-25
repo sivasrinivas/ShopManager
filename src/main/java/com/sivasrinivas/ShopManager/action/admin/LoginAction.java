@@ -32,7 +32,7 @@ public class LoginAction extends ActionSupport{
 			}
 			else{
 				logger.error("login failed");
-				addActionError("Login failed.");
+				addActionError("Email Id or Password didn't match. Please try again.");
 				return INPUT;
 			}
 				

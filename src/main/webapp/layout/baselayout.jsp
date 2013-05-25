@@ -16,10 +16,10 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="row">
+			<header class="row">
 				<tiles:insertAttribute name="header" />
-			</div>
-			<div id="main-container">
+			</header>
+			<section id="main-container">
 				<div class="span3">
 					<tiles:insertAttribute name="sidebar" />
 					<br>
@@ -28,7 +28,7 @@
 				<div class="span9">
 					<tiles:insertAttribute name="body" />
 				</div>
-			</div>
+			</section>
 			<footer class="footer span12">
 				<tiles:insertAttribute name="footer" />
 			</footer>
