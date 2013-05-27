@@ -22,6 +22,7 @@
 		</div>
 	</div>
 </div>
+
 <!-- Login Mdoal -->
 <div id="loginModal" class="modal hide fade in" tabindex="-1" role="dialog" 
 	aria-labelledby="loginModalLabel" area-hidden="true">
@@ -88,6 +89,15 @@
 	</div>
 	<!-- <div class="modal-footer">	</div> -->
 </div>
-<br><br><br><br>
+<br><br><br>
+<!-- search bar -->
+<section id="search">
+	<form class="form-search">
+  		<div class="input-append offset3">
+    		<input type="text" class="input-xxlarge search-query" style="height: 30px;" placeholder="Search...">
+    		<button type="submit" class="btn btn-primary" style="height: 40px;">Search</button>
+  		</div>
+  </form>
+</section>
 <!-- Fork me on github ribbon -->
 <a href="https://github.com/you"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>

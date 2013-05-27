@@ -24,3 +24,11 @@
   <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
   <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 </div>
+
+<div id="products">
+	<div id="product">
+		<img src="/shop/assets/img/download.png" class="img-polaroid"/>
+		Name
+		price, rating
+	</div>
+</div>
