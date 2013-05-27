@@ -10,7 +10,7 @@
  
 	<http auto-config="true">
 		<intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
-		<form-login login-page="/admin/login.jsp" default-target-url="/home.html" authentication-failure-url="/loginfailed?error=true" />  
+		<form-login login-page="/Login_execute.action" default-target-url="/home.html" authentication-failure-url="/loginfailed?error=true" />  
 	</http>
  
 	<authentication-manager>

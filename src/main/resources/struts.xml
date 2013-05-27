@@ -36,13 +36,12 @@
 		<result-types>
 			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
-		<action name="">
-			<result type="tiles">/admin.login.tiles</result>
-		</action>
+		
 		<action name="login">
 			<result type="tiles">/admin.login.tiles</result>
 		</action>
 		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.admin.LoginAction" method="{1}">
+			<result name="login" type="tiles">/admin.login.tiles</result>
 			<result name="success">/home.html</result>
 			<result name="input" type="tiles">/admin.login.tiles</result>
 			<result name="error">/error/error.jsp</result>
