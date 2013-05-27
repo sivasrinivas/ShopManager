@@ -3,7 +3,7 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="#">Shop Manager</a>
+			<a class="brand" href="/shop/">Shop Manager</a>
 			<ul class="nav">
 				<li><a href="#"><b>Home</b></a></li>
 				<li class="dropdown">

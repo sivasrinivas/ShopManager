@@ -4,7 +4,7 @@
 		<div class="container">
 			<a class="brand" href="#">Shop Manager</a>
 			<ul class="nav">
-				<li><a href="#"><b>Home</b></a></li>
+				<li><a href="/shop/admin/"><b>Home</b></a></li>
 				<li class="dropdown"><a class="dropdown-toggle"
 					data-toggle="dropdown" href="#"> Products<b class="caret"></b>
 				</a>
