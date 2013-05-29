@@ -1,4 +1,4 @@
-package com.sivasrinivas.ShopManager.service;
+package com.sivasrinivas.ShopManager.service.admin;
 import com.sivasrinivas.ShopManager.model.CategoryModel;
 import java.util.Collection;
 

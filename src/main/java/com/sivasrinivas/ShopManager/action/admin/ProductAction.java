@@ -8,7 +8,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.sivasrinivas.ShopManager.model.ProductModel;
-import com.sivasrinivas.ShopManager.service.ProductService;
+import com.sivasrinivas.ShopManager.service.admin.ProductService;
 
 public class ProductAction extends ActionSupport{
 	static Logger logger = Logger.getLogger(ProductAction.class);

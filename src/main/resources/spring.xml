@@ -33,10 +33,10 @@
 	<bean id="adminDAO" class="com.sivasrinivas.ShopManager.dao.impl.AdminDAOImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
-	<bean id="CategoryService" class="com.sivasrinivas.ShopManager.service.impl.CategoryServiceImpl">
+	<bean id="CategoryService" class="com.sivasrinivas.ShopManager.service.impl.admin.CategoryServiceImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
-    <bean id="ProductService" class="com.sivasrinivas.ShopManager.service.impl.ProductServiceImpl">
+    <bean id="ProductService" class="com.sivasrinivas.ShopManager.service.impl.admin.ProductServiceImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
 </beans>

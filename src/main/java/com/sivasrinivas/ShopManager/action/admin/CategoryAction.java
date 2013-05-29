@@ -11,7 +11,7 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.sivasrinivas.ShopManager.model.CategoryModel;
-import com.sivasrinivas.ShopManager.service.CategoryService;
+import com.sivasrinivas.ShopManager.service.admin.CategoryService;
 
 /**
  * @author Siva

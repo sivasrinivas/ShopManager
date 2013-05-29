@@ -1,4 +1,4 @@
-package com.sivasrinivas.ShopManager.service.impl;
+package com.sivasrinivas.ShopManager.service.impl.admin;
 import java.util.Collection;
 import java.util.UUID;
 
@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Repository;
 
 import com.sivasrinivas.ShopManager.model.CategoryModel;
-import com.sivasrinivas.ShopManager.service.CategoryService;
+import com.sivasrinivas.ShopManager.service.admin.CategoryService;
 
 @Repository
 public class CategoryServiceImpl implements CategoryService{

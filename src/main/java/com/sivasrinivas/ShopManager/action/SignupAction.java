@@ -1,4 +1,4 @@
-package com.sivasrinivas.ShopManager.action.user;
+package com.sivasrinivas.ShopManager.action;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -11,18 +11,18 @@
 		</result-types>
 		<!-- default action for index.jsp page -->
 		<action name="">
-			<result type="tiles">/index.tiles</result>
+			<result type="tiles">/index</result>
 		</action>
 	
 		<action name="login">
-			<result type="tiles">/user.login.tiles</result>
+			<result type="tiles">/user.login</result>
 		</action>
-		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.user.LoginAction" method="{1}">
-			<result name="success" type="tiles">/user.login.tiles</result>
+		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.LoginAction" method="{1}">
+			<result name="success" type="tiles">/user.login</result>
 			<result name="error" type="tiles">//</result>
 		</action>
-		<action name="Signup_*" class="com.sivasrinivas.ShopManager.action.user.SignupAction" method="{1}">
-			<result name="success" type="tiles">/user.login.tiles</result>
+		<action name="Signup_*" class="com.sivasrinivas.ShopManager.action.SignupAction" method="{1}">
+			<result name="success" type="tiles">/user.login</result>
 			<result name="error" type="tiles">//</result>
 		</action>
 	</package>
