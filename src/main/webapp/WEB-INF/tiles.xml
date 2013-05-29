@@ -22,35 +22,38 @@
         <put-attribute name="footer" value="/layout/footer.jsp" />
     </definition>
     
-    <definition name="/index.tiles" extends="baseLayout">
+    <!-- user related action tiles -->
+    <definition name="/index" extends="baseLayout">
         <put-attribute name="title" value="ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/layout/index.jsp" />
     </definition>
-    <definition name="/account.login.tiles" extends="baseLayout">
+    <definition name="/account.login" extends="baseLayout">
         <put-attribute name="title" value="Login - ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/login.jsp" />
     </definition>
-    <definition name="/account.register.tiles" extends="baseLayout">
+    <definition name="/account.register" extends="baseLayout">
         <put-attribute name="title" value="Register - ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/register.jsp" />
     </definition>
-    <definition name="/user.login.tiles" extends="baseLayout">
+    <definition name="/user.login" extends="baseLayout">
         <put-attribute name="title" value="Login - ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/user/login.jsp" />
     </definition>
-    <definition name="/admin.login.tiles" extends="adminLayout">
+    
+    <!-- admin related action tiles -->
+    <definition name="/admin.login" extends="adminLayout">
         <put-attribute name="title" value="Admin Login - ShopManager" />
         <put-attribute name="body" value="/admin/login.jsp" />
     </definition>
-    <definition name="/admin.category.addsetup.tiles" extends="adminLayout">
+    <definition name="/admin.category.addsetup" extends="adminLayout">
         <put-attribute name="title" value="Add Category - ShopManager" />
         <put-attribute name="body" value="/admin/addcategorysetup.jsp" />
     </definition>
-    <definition name="/product.addproduct.tiles" extends="adminLayout">
+    <definition name="/product.addproduct" extends="adminLayout">
         <put-attribute name="title" value="Add Product - ShopManager" />
         <put-attribute name="body" value="/admin/addproduct.jsp" />
     </definition>

@@ -12,21 +12,21 @@
 		</result-types>
 		
 		<action name="login">
-			<result type="tiles">/admin.login.tiles</result>
+			<result type="tiles">/admin.login</result>
 		</action>
 		<action name="Login_*" class="com.sivasrinivas.ShopManager.action.admin.LoginAction" method="{1}">
-			<result name="login" type="tiles">/admin.login.tiles</result>
+			<result name="login" type="tiles">/admin.login</result>
 			<result name="success">/home.html</result>
-			<result name="input" type="tiles">/admin.login.tiles</result>
+			<result name="input" type="tiles">/admin.login</result>
 			<result name="error">/error/error.jsp</result>
 		</action>
 		<action name="Category_*" class="com.sivasrinivas.ShopManager.action.admin.CategoryAction" method="{1}">
-			<result name="addCategorySetup" type="tiles">/admin.category.addsetup.tiles</result>
-			<result name="success" type="tiles">/admin.category.addsetup.tiles</result>
+			<result name="addCategorySetup" type="tiles">/admin.category.addsetup</result>
+			<result name="success" type="tiles">/admin.category.addsetup</result>
 		</action>
 		<action name="Product_*" class="com.sivasrinivas.ShopManager.action.admin.ProductAction" method="{1}">
-			<result name="addProduct" type="tiles">/product.addproduct.tiles</result>
-			<result name="insertProduct" type="tiles">/product.addproduct.tiles</result>
+			<result name="addProduct" type="tiles">/product.addproduct</result>
+			<result name="insertProduct" type="tiles">/product.addproduct</result>
 		</action>
 	</package>
 

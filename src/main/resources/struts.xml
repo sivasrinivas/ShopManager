@@ -13,12 +13,7 @@
 		<action name="">
 			<result type="tiles">/index.tiles</result>
 		</action>
-	</package>
 	
-	<package name="account" extends="struts-default" namespace="/account">
-		<result-types>
-			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
-		</result-types>
 		<action name="login">
 			<result type="tiles">/user.login.tiles</result>
 		</action>
@@ -31,5 +26,4 @@
 			<result name="error" type="tiles">//</result>
 		</action>
 	</package>
-	
 </struts>
