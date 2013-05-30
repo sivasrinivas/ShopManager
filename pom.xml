@@ -167,7 +167,33 @@
 			<artifactId>displaytag-export-poi</artifactId>
 			<version>1.1.1</version>
 		</dependency>
-
+		<!-- struts2-jquery dependencies -->
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-plugin</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-grid-plugin</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-richtext-plugin</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-tree-plugin</artifactId>
+			<version>3.5.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jgeppert.struts2.jquery</groupId>
+			<artifactId>struts2-jquery-mobile-plugin</artifactId>
+			<version>3.5.1</version>
+		</dependency><!-- end of struts2-jquery dependencies -->
+		
 	</dependencies>
 
 	<build>

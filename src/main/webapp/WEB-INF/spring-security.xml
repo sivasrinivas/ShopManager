@@ -9,8 +9,8 @@
 	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
  
 	<http auto-config="true">
-		<intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
-		<form-login login-page="/Login_execute.action" default-target-url="/home.html" authentication-failure-url="/loginfailed?error=true" />  
+		<!-- <intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
+		<form-login login-page="/Login_execute.action" default-target-url="/home.html" authentication-failure-url="/loginfailed?error=true" /> -->  
 	</http>
  
 	<authentication-manager>

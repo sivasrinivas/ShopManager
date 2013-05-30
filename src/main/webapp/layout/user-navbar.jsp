@@ -2,7 +2,7 @@
 <!-- user menu nav bar -->
 <div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
-		<div class="container">
+		<div class="container-fluid">
 			<a class="brand" href="/shop/">Shop Manager</a>
 			<ul class="nav">
 				<li><a href="#"><b>Home</b></a></li>

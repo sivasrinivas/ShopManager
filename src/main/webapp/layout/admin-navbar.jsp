@@ -1,7 +1,7 @@
 <!-- admin menu nav bar -->
 <div class="navbar navbar-fixed-top navbar-inverse">
 	<div class="navbar-inner">
-		<div class="container">
+		<div class="container-fluid">
 			<a class="brand" href="#">Shop Manager</a>
 			<ul class="nav">
 				<li><a href="/shop/admin/"><b>Home</b></a></li>

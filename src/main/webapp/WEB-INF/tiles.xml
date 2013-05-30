@@ -6,7 +6,7 @@
 <tiles-definitions>
     
     <!-- Layout for user actions -->
-    <definition name="baseLayout" template="/layout/baselayout.jsp">
+    <definition name="baseLayout" template="/layout/userlayout.jsp">
     	<put-attribute name="title" value="" />
     	<put-attribute name="header" value="/layout/header.jsp" />
         <put-attribute name="sidebar" value="/layout/sidebar.jsp" />

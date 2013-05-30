@@ -5,30 +5,30 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="/shop/assets/js/jquery.js"></script>
 <script type="text/javascript" src="/shop/assets/js/bootstrap.js"></script>
 <!-- jEditable plugin -->
 <script type="text/javascript" src="/shop/assets/js/jquery.jeditable.js"></script>
-<link rel="stylesheet" media="screen" type="text/css"	href="/shop/assets/css/bootstrap.css"></link>
-<link rel="stylesheet" media="screen" type="text/css"	href="/shop/assets/css/bootstrap-responsive.css"></link>
+<link rel="stylesheet" type="text/css"	href="/shop/assets/css/bootstrap.css"></link>
+<link rel="stylesheet" type="text/css"	href="/shop/assets/css/bootstrap-responsive.css"></link>
 <!-- custom defined css -->
 <link rel="stylesheet" href="/shop/assets/css/basic.css"></link>
 
 <title><tiles:insertAttribute name="title" ignore="true" /></title>
 </head>
 <body>
-	<div id="main-wrapper" class="container">
-		<div class="row">
-			<div id="main-header">
-				<tiles:insertAttribute name="header" />
-			</div>
-			<div id="main-container">
+	<jsp:include page="/layout/admin-navbar.jsp" />
+	<!-- end of admin-navbar -->
+	<section id="main-container">
+		<div class="container-fluid">
+			<div class="row-fluid">
 				<tiles:insertAttribute name="body" />
 			</div>
-			<footer class="footer span12" id="main-footer">
-				<tiles:insertAttribute name="footer" />
-			</footer>
 		</div>
-	</div>
+	</section>
+	<footer class="footer" id="main-footer"> 
+		<tiles:insertAttribute	name="footer" /> 
+	</footer>
 </body>
 </html>
