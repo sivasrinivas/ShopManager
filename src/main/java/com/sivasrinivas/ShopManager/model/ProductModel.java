@@ -1,6 +1,7 @@
 package com.sivasrinivas.ShopManager.model;
 
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -9,7 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class ProductModel {
 	//attributes of product model object
 	@Id
-	private String SKU;
+	private BigInteger SKU;
 	private String name;
 	private BigDecimal price;
 	private BigDecimal discPrice;
@@ -21,13 +22,13 @@ public class ProductModel {
 	/**
 	 * @return the sKU
 	 */
-	public String getSKU() {
+	public BigInteger getSKU() {
 		return SKU;
 	}
 	/**
 	 * @param sKU the sKU to set
 	 */
-	public void setSKU(String SKU) {
+	public void setSKU(BigInteger SKU) {
 		this.SKU = SKU;
 	}
 	/**

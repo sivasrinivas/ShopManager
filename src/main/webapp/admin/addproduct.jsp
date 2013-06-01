@@ -1,9 +1,8 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <%@ taglib prefix="display" uri="http://displaytag.sf.net" %>
-<div class="page-header">
-<h2>Add Product</h2>
-</div>
 
+<legend>Add Product</legend>
+<jsp:include page="/layout/messages.jsp"></jsp:include>
 <s:form action="Product_insertProduct" id="addProductForm"	theme="simple" cssClass="form-horizontal pull-left">
 	<div class="control-group">
 		<label class="control-label"><s:text name="Name:"></s:text></label>
@@ -16,6 +15,13 @@
 		</label>
 		<div class="controls">
 			<s:textfield name="product.price" id="productPrice" />
+		</div>
+		<br>
+		<label class="control-label">
+			<s:text name="Category Type:"></s:text>
+		</label>
+		<div class="controls">
+			<s:select name="categoryType" id="categoryType" list="categoryNames" />
 		</div>
 		<br>
 		<div class="controls">

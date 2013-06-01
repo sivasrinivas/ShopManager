@@ -1,11 +1,11 @@
 package com.sivasrinivas.ShopManager.service.impl.admin;
 import java.util.Collection;
-import java.util.UUID;
+import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.stereotype.Repository;
 
+import com.sivasrinivas.ShopManager.dao.CategoryDAO;
 import com.sivasrinivas.ShopManager.model.CategoryModel;
 import com.sivasrinivas.ShopManager.service.admin.CategoryService;
 
@@ -13,52 +13,52 @@ import com.sivasrinivas.ShopManager.service.admin.CategoryService;
 public class CategoryServiceImpl implements CategoryService{
 	static Logger logger = Logger.getLogger(CategoryServiceImpl.class);
 	
-	private MongoOperations mongoOperations;
-	/**
-	 * adds a new category to the Category collection
-	 */
-	@Override
-	public void addCategory(CategoryModel category) {
-		logger.info("adding a category to collection category.");
-		category.setId(UUID.randomUUID().toString());
-		mongoOperations.insert(category);
-	}
+	private CategoryDAO categoryDAO;
+	//private MongoOperations mongoOperations;
 	
-	/**
-	 * updates existing category details
-	 */
-	@Override
-	public void updateCategory(CategoryModel category) {
-		mongoOperations.save(category);
-	}
-	/**
-	 * delete existing category
-	 */
-	@Override
-	public void deleteCategory(CategoryModel category) {
-		mongoOperations.remove(category);
-	}
 	/**
 	 * gets all existing categories list
 	 */
 	@Override
 	public Collection<CategoryModel> getCategoryList() {
-		return mongoOperations.findAll(CategoryModel.class);
+		return categoryDAO.getAllDocuments();
+	}
+
+	/*
+	 * get all category names
+	 */
+	public List<String> getCategoryNames(){
+		return categoryDAO.getCategoryNames();
+	}
+
+	@Override
+	public void addCategory(CategoryModel category) {
+		categoryDAO.insert(category);
+	}
+
+	@Override
+	public void updateCategory(CategoryModel category) {
+		categoryDAO.saveOrUpdate(category);
+	}
+
+	@Override
+	public void deleteCategory(CategoryModel category) {
+		categoryDAO.remove(category);
 	}
 
 	//Getters and Setters
 	/**
-	 * @return the mongoTemplate
+	 * @return the categoryDAO
 	 */
-	public MongoOperations getMongoTemplate() {
-		return mongoOperations;
+	public CategoryDAO getCategoryDAO() {
+		return categoryDAO;
 	}
 
 	/**
-	 * @param mongoTemplate the mongoTemplate to set
+	 * @param categoryDAO the categoryDAO to set
 	 */
-	public void setMongoTemplate(MongoOperations mongoOperations) {
-		this.mongoOperations = mongoOperations;
+	public void setCategoryDAO(CategoryDAO categoryDAO) {
+		this.categoryDAO = categoryDAO;
 	}
 
 }
