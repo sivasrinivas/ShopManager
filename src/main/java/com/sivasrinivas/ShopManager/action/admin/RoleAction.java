@@ -9,24 +9,31 @@ import com.sivasrinivas.ShopManager.model.RoleModel;
 import com.sivasrinivas.ShopManager.service.admin.RoleService;
 
 public class RoleAction {
-	
-	private RoleModel role;
-	private Collection<RoleModel> roleList;
 	ApplicationContext ctx = new GenericXmlApplicationContext("spring.xml");
 	RoleService roleService = (RoleService)ctx.getBean("roleService");
 	
+	private RoleModel role;
+	private String roleName;
+	private Collection<String> roleList;
+	
 	public String addRole(){
 		String result="addRole";
-		
+		role = null;
+		roleList = roleService.getRoleNamesList();
 		return result;
 	}
 
 	public String saveRole(){
 		String result="addRole";
 		roleService.addRole(role);
-		
-		return result;
+		return addRole();
 	}
+	
+	public String removeRole(){
+		roleService.deleteRoleByName(roleName);
+		return addRole();
+	}
+	
 	/**
 	 * @return the role
 	 */
@@ -44,14 +51,28 @@ public class RoleAction {
 	/**
 	 * @return the roleList
 	 */
-	public Collection<RoleModel> getRoleList() {
+	public Collection<String> getRoleList() {
 		return roleList;
 	}
 
 	/**
 	 * @param roleList the roleList to set
 	 */
-	public void setRoleList(Collection<RoleModel> roleList) {
+	public void setRoleList(Collection<String> roleList) {
 		this.roleList = roleList;
+	}
+
+	/**
+	 * @return the roleName
+	 */
+	public String getRoleName() {
+		return roleName;
+	}
+
+	/**
+	 * @param roleName the roleName to set
+	 */
+	public void setRoleName(String roleName) {
+		this.roleName = roleName;
 	}
 }
