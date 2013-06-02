@@ -9,7 +9,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class RoleModel {
 	@Id
 	private BigInteger id;
-	private String role;
+	private String name;
 	/**
 	 * @return the id
 	 */
@@ -25,13 +25,13 @@ public class RoleModel {
 	/**
 	 * @return the role
 	 */
-	public String getRole() {
-		return role;
+	public String getName() {
+		return name;
 	}
 	/**
 	 * @param role the role to set
 	 */
-	public void setRole(String role) {
-		this.role = role;
+	public void setName(String name) {
+		this.name = name;
 	}
 }

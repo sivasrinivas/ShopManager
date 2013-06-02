@@ -55,5 +55,8 @@
         <put-attribute name="title" value="Add Product - ShopManager" />
         <put-attribute name="body" value="/admin/addproduct.jsp" />
     </definition>
-    
+    <definition name="/role.addrole" extends="adminLayout">
+        <put-attribute name="title" value="Add Role - ShopManager" />
+        <put-attribute name="body" value="/admin/addrole.jsp" />
+    </definition>
 </tiles-definitions>

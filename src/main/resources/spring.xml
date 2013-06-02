@@ -42,6 +42,12 @@
     <bean id="productService" class="com.sivasrinivas.ShopManager.service.impl.admin.ProductServiceImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
+	<bean id="roleService" class="com.sivasrinivas.ShopManager.service.impl.admin.RoleServiceImpl">
+		<property name="roleDAO" ref="roleDAO"></property>
+	</bean>
+	<bean id="roleDAO" class="com.sivasrinivas.ShopManager.dao.impl.RoleDAOImpl">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
 </beans>
 
 

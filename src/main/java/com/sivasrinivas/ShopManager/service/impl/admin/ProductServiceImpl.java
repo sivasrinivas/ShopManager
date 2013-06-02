@@ -1,7 +1,7 @@
 package com.sivasrinivas.ShopManager.service.impl.admin;
 
+import java.math.BigInteger;
 import java.util.Collection;
-import java.util.UUID;
 
 import org.apache.log4j.Logger;
 import org.springframework.data.mongodb.core.MongoOperations;
@@ -23,7 +23,7 @@ public class ProductServiceImpl implements ProductService{
 	public void insertProduct(ProductModel product) {
 		logger.info("Inserting product into product collection.");
 		System.out.println("inserting product into collection");
-		product.setSKU(UUID.randomUUID().toString());
+		product.setSKU(new BigInteger("123"));
 		mongoOperations.insert(product);
 	}
 

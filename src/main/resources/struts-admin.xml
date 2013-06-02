@@ -31,6 +31,9 @@
 			<result name="addProduct" type="tiles">/product.addproduct</result>
 			<result name="insertProduct" type="tiles">/product.addproduct</result>
 		</action>
+		<action name="Role_*" class="com.sivasrinivas.ShopManager.action.admin.RoleAction" method="{1}">
+			<result name="addRole" type="tiles">/role.addrole</result>
+		</action>
 	</package>
 
 </struts>

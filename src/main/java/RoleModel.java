@@ -35,4 +35,16 @@ public class RoleModel {
 	public void setRole(String role) {
 		this.role = role;
 	}
+	/**
+	 * @return the isDeprecated
+	 */
+	public boolean isDeprecated() {
+		return isDeprecated;
+	}
+	/**
+	 * @param isDeprecated the isDeprecated to set
+	 */
+	public void setDeprecated(boolean isDeprecated) {
+		this.isDeprecated = isDeprecated;
+	}
 }

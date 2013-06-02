@@ -18,7 +18,7 @@
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-web-api</artifactId>
-			<version>6.0</version>
+			<version>7.0</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
@@ -37,7 +37,7 @@
 		<dependency>
 			<groupId>org.mongodb</groupId>
 			<artifactId>mongo-java-driver</artifactId>
-			<version>2.10.1</version>
+			<version>2.11.1</version>
 		</dependency>
 		<!-- Spring data mongodb -->
 		<dependency>
@@ -53,21 +53,21 @@
 		</dependency>
 		<!-- Struts2 dependencies -->
 		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-tiles-plugin</artifactId>
-			<version>2.3.4</version>
+  			<groupId>org.apache.struts</groupId>
+  			<artifactId>struts2-tiles-plugin</artifactId>
+  			<version>2.3.14.2</version>
 		</dependency>
 		<dependency>
-			<groupId>org.apache.struts</groupId>
-			<artifactId>struts2-core</artifactId>
-			<version>2.3.1.2</version>
+  			<groupId>org.apache.struts</groupId>
+  			<artifactId>struts2-core</artifactId>
+  			<version>2.3.14.2</version>
 		</dependency>
 		
 		<!-- Google gson dependency for json objects -->
 		<dependency>
   			<groupId>com.google.code.gson</groupId>
   			<artifactId>gson</artifactId>
-  			<version>2.2.3</version>
+  			<version>2.2.4</version>
 		</dependency>
 		<!-- Spring 3 dependencies -->
 		<dependency>

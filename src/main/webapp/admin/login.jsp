@@ -1,9 +1,9 @@
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <div class="page-header">
-	<h3>Login</h3>
+	<h2>Login</h2>
 </div>
 <jsp:include page="/layout/messages.jsp"></jsp:include>
-<s:form id="loginForm" action="/admin/Login_login.action"	theme="simple" cssClass="form-horizontal offset3 well span6">
+<s:form id="loginForm" action="/admin/Login_login.action"	theme="simple" cssClass="form-horizontal offset3 well span5">
 	<div class="control-group">
 		<label class="control-label">Email Id:</label>
 		<div class="controls">
