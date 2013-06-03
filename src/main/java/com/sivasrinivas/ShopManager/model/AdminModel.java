@@ -12,14 +12,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class AdminModel {
 	
 	@Id 
-	BigInteger id;
-	String firstName;
-	String middleName;
-	String lastName;
-	String userId;
-	String emailId;
-	String password;
-	String phoneNumber;
+	private BigInteger id;
+	private String firstName;
+	private String middleName;
+	private String lastName;
+	private String emailId;
+	private String password;
+	private String phoneNumber;
+	private String role;
+	private boolean isDeprecated;
 	
 	public void setId(BigInteger id) {
 		this.id = id;
@@ -37,12 +38,6 @@ public class AdminModel {
 		this.lastName = lastName;
 	}
 	
-	public String getUserId() {
-		return userId;
-	}
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
 	public String getEmailId() {
 		return emailId;
 	}
@@ -129,6 +124,30 @@ public class AdminModel {
 	public void markAsPartialObject() {
 		// TODO Auto-generated method stub
 		
+	}
+	/**
+	 * @return the isDeprecated
+	 */
+	public boolean isDeprecated() {
+		return isDeprecated;
+	}
+	/**
+	 * @param isDeprecated the isDeprecated to set
+	 */
+	public void setDeprecated(boolean isDeprecated) {
+		this.isDeprecated = isDeprecated;
+	}
+	/**
+	 * @return the role
+	 */
+	public String getRole() {
+		return role;
+	}
+	/**
+	 * @param role the role to set
+	 */
+	public void setRole(String role) {
+		this.role = role;
 	}
 	
 	

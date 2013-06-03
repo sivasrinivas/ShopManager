@@ -34,6 +34,9 @@
 		<action name="Role_*" class="com.sivasrinivas.ShopManager.action.admin.RoleAction" method="{1}">
 			<result name="addRole" type="tiles">/role.addrole</result>
 		</action>
+		<action name="Admin_*" class="com.sivasrinivas.ShopManager.action.admin.AdminAction" method="{1}">
+			<result name="addAdmin" type="tiles">/admin.addadmin</result>
+		</action>
 	</package>
 
 </struts>

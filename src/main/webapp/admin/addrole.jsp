@@ -21,7 +21,7 @@
 	<display:table uid="roleTable" name="roleList" id="row" class="table table-striped table-bordered table-condensed">
 		<display:caption><strong>Roles</strong></display:caption>
 		<display:column title="Name">${row}</display:column>
-		<display:column title="Operation" style="text-wrap:none">
+		<display:column title="Operation">
 			<s:a action="Role_removeRole" tooltip="Delete Rule" includeParams="all">
 				<s:param name="roleName">${row}</s:param>
 				<i class="icon-trash"></i>

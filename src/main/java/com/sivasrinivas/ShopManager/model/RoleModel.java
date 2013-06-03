@@ -10,6 +10,7 @@ public class RoleModel {
 	@Id
 	private BigInteger id;
 	private String name;
+	private boolean isDeprecated;
 	/**
 	 * @return the id
 	 */
@@ -33,5 +34,17 @@ public class RoleModel {
 	 */
 	public void setName(String name) {
 		this.name = name;
+	}
+	/**
+	 * @return the isDeprecated
+	 */
+	public boolean isDeprecated() {
+		return isDeprecated;
+	}
+	/**
+	 * @param isDeprecated the isDeprecated to set
+	 */
+	public void setDeprecated(boolean isDeprecated) {
+		this.isDeprecated = isDeprecated;
 	}
 }
