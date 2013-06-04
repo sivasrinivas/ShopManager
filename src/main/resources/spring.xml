@@ -20,6 +20,10 @@
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 	
+	<bean id="commonDAO" class="com.sivasrinivas.ShopManager.dao.impl.CommonDAOImpl">
+		<property name="mongoTemplate" ref="mongoTemplate"></property>
+	</bean>
+	
 	<bean id="signupService" class="com.sivasrinivas.ShopManager.service.impl.SignupServiceImpl">
 		<property name="userDAO" ref="userDAO"></property>
 	</bean>
@@ -44,6 +48,7 @@
 	</bean>
 	<bean id="roleService" class="com.sivasrinivas.ShopManager.service.impl.admin.RoleServiceImpl">
 		<property name="roleDAO" ref="roleDAO"></property>
+		<property name="commonDAO" ref="commonDAO"></property>
 	</bean>
 	<bean id="roleDAO" class="com.sivasrinivas.ShopManager.dao.impl.RoleDAOImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>

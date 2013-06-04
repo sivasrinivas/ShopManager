@@ -10,7 +10,7 @@ public class RoleModel {
 	@Id
 	private BigInteger id;
 	private String name;
-	private boolean isDeprecated;
+	private boolean isDeprecated = false;
 	/**
 	 * @return the id
 	 */

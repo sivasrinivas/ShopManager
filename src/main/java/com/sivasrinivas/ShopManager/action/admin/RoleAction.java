@@ -1,6 +1,7 @@
 package com.sivasrinivas.ShopManager.action.admin;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
@@ -14,12 +15,13 @@ public class RoleAction {
 	
 	private RoleModel role;
 	private String roleName;
-	private Collection<String> roleList;
+	private Collection<String> roleNamesList;
+	private List<RoleModel> roleList;
 	
 	public String addRole(){
 		String result="addRole";
 		role = null;
-		roleList = roleService.getRoleNamesList();
+		roleList = roleService.getRoleList();
 		return result;
 	}
 
@@ -30,7 +32,8 @@ public class RoleAction {
 	}
 	
 	public String removeRole(){
-		roleService.deleteRoleByName(roleName);
+//		roleService.deleteRoleByName(roleName);
+		roleService.deleteRole(role);
 		return addRole();
 	}
 	
@@ -51,14 +54,14 @@ public class RoleAction {
 	/**
 	 * @return the roleList
 	 */
-	public Collection<String> getRoleList() {
+	public List<RoleModel> getRoleList() {
 		return roleList;
 	}
 
 	/**
 	 * @param roleList the roleList to set
 	 */
-	public void setRoleList(Collection<String> roleList) {
+	public void setRoleList(List<RoleModel> roleList) {
 		this.roleList = roleList;
 	}
 
@@ -74,5 +77,19 @@ public class RoleAction {
 	 */
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
+	}
+
+	/**
+	 * @return the roleNamesList
+	 */
+	public Collection<String> getRoleNamesList() {
+		return roleNamesList;
+	}
+
+	/**
+	 * @param roleNamesList the roleNamesList to set
+	 */
+	public void setRoleNamesList(Collection<String> roleNamesList) {
+		this.roleNamesList = roleNamesList;
 	}
 }

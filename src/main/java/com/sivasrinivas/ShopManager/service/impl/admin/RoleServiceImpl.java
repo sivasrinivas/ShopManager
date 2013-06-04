@@ -1,13 +1,16 @@
 package com.sivasrinivas.ShopManager.service.impl.admin;
 
 import java.util.Collection;
+import java.util.List;
 
+import com.sivasrinivas.ShopManager.dao.CommonDAO;
 import com.sivasrinivas.ShopManager.dao.RoleDAO;
 import com.sivasrinivas.ShopManager.model.RoleModel;
 import com.sivasrinivas.ShopManager.service.admin.RoleService;
 
 public class RoleServiceImpl implements RoleService{
 	private RoleDAO roleDAO;
+	private CommonDAO commonDAO;
 	
 	@Override
 	public void addRole(RoleModel role) {
@@ -16,7 +19,9 @@ public class RoleServiceImpl implements RoleService{
 
 	@Override
 	public void deleteRole(RoleModel role) {
-		roleDAO.remove(role);
+		role = roleDAO.findById(role);
+		role.setDeprecated(true);
+		commonDAO.save(role);
 	}
 	
 	@Override
@@ -29,7 +34,12 @@ public class RoleServiceImpl implements RoleService{
 		Collection<String> roleList = roleDAO.getNames();
 		return roleList;
 	}
-
+	@Override
+	public List<RoleModel> getRoleList(){
+		List<RoleModel> roleList = roleDAO.getList();
+		return roleList;
+	}
+	
 	/**
 	 * @return the roleDAO
 	 */
@@ -42,6 +52,20 @@ public class RoleServiceImpl implements RoleService{
 	 */
 	public void setRoleDAO(RoleDAO roleDAO) {
 		this.roleDAO = roleDAO;
+	}
+
+	/**
+	 * @return the commonDAO
+	 */
+	public CommonDAO getCommonDAO() {
+		return commonDAO;
+	}
+
+	/**
+	 * @param commonDAO the commonDAO to set
+	 */
+	public void setCommonDAO(CommonDAO commonDAO) {
+		this.commonDAO = commonDAO;
 	}
 
 	

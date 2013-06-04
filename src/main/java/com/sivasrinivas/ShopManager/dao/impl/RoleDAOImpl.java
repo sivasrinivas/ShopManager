@@ -21,8 +21,12 @@ public class RoleDAOImpl implements RoleDAO {
 
 	@Override
 	public void remove(RoleModel role) {
-		// TODO Auto-generated method stub
-
+		
+	}
+	
+	@Override
+	public RoleModel findById(RoleModel role){
+		return mongoTemplate.findById(role.getId(), RoleModel.class);
 	}
 	
 	@Override
@@ -34,6 +38,11 @@ public class RoleDAOImpl implements RoleDAO {
 		for(RoleModel role : list)
 			names.add(role.getName());
 		return names;
+	}
+	
+	@Override
+	public List<RoleModel> getList(){
+		return mongoTemplate.findAll(RoleModel.class);
 	}
 	
 	@Override

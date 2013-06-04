@@ -4,6 +4,7 @@
 package com.sivasrinivas.ShopManager.service.admin;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.sivasrinivas.ShopManager.model.RoleModel;
 
@@ -12,8 +13,9 @@ import com.sivasrinivas.ShopManager.model.RoleModel;
  *
  */
 public interface RoleService {
-	public void addRole(RoleModel role);
-	public void deleteRole(RoleModel role);
-	public Collection<String> getRoleNamesList();
-	public void deleteRoleByName(String roleName);
+	void addRole(RoleModel role);
+	void deleteRole(RoleModel role);
+	Collection<String> getRoleNamesList();
+	void deleteRoleByName(String roleName);
+	List<RoleModel> getRoleList();
 }
