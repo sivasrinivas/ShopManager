@@ -23,7 +23,6 @@ public class ProductServiceImpl implements ProductService{
 	public void insertProduct(ProductModel product) {
 		logger.info("Inserting product into product collection.");
 		System.out.println("inserting product into collection");
-		product.setSKU(new BigInteger("123"));
 		mongoOperations.insert(product);
 	}
 

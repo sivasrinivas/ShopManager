@@ -12,8 +12,8 @@
 			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" />
 		</result-types>
 		<!-- default action for index.jsp page -->
-		<action name="">
-			<result type="tiles">/index</result>
+		<action name="" class="com.sivasrinivas.ShopManager.action.WelcomeAction">
+			<result name="success" type="tiles">index</result>
 		</action>
 	
 		<action name="login">

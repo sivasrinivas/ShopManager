@@ -11,7 +11,7 @@
           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<!-- for annotation config --> 
  	<context:annotation-config/>
-    <context:component-scan base-package="org.springframework.data.mongodb.examples.hello"/>
+    <context:component-scan base-package="com.sivasrinivas.ShopManager.service"/>
  
  	<mongo:mongo host="localhost" port="27017" />
 	<mongo:db-factory dbname="shop" />
@@ -20,6 +20,9 @@
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
 	</bean>
 	
+ 	<bean id="masterService" class="com.sivasrinivas.ShopManager.service.impl.MasterServiceImpl">
+	</bean>
+ 	
 	<bean id="commonDAO" class="com.sivasrinivas.ShopManager.dao.impl.CommonDAOImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>

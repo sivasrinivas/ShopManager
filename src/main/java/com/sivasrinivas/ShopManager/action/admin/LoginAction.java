@@ -1,6 +1,7 @@
 package com.sivasrinivas.ShopManager.action.admin;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +15,7 @@ public class LoginAction extends ActionSupport{
 	 */
 	private static final long serialVersionUID = 6025733989482587432L;
 	static Logger logger = Logger.getLogger(LoginAction.class);
+	
 	private ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
 	private LoginService loginService = (LoginService) context.getBean("loginService");
 	

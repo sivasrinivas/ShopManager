@@ -66,10 +66,15 @@
     	<url-pattern>*.jsp</url-pattern>
   	</filter-mapping>
   
-  	<!-- spring security listener -->
+  	<!-- spring/spring security listener -->
   	<listener>  
    		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
   	</listener>  
+  	
+  	<context-param>
+    	<param-name>contextConfigLocation</param-name>
+    	<param-value>classpath:spring.xml</param-value>
+	</context-param>
   	
 	<!-- struts tiles definition-->
 	<listener>

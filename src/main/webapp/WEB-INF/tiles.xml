@@ -21,10 +21,10 @@
     </definition>
     
     <!-- user related action tiles -->
-    <definition name="/index" extends="userLayout">
+    <definition name="index" extends="userLayout">
         <put-attribute name="title" value="ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
-        <put-attribute name="body" value="/layout/index.jsp" />
+        <put-attribute name="body" value="/index.jsp" />
     </definition>
     <definition name="/account.login" extends="userLayout">
         <put-attribute name="title" value="Login - ShopManager" />

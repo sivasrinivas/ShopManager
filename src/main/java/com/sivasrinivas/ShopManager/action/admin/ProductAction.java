@@ -32,8 +32,8 @@ public class ProductAction extends ActionSupport{
 	/* add product setup page*/
 	public String addProduct(){
 		String result = "addProduct";
+		product = null;
 		productList = productService.getProcutList();
-		categoryNames = categoryService.getCategoryNames();
 		return result;
 	}
 	
@@ -41,7 +41,8 @@ public class ProductAction extends ActionSupport{
 		System.out.println("AddProduct action called.");
 		String result = "insertProduct";
 		productService.insertProduct(product);
-		return result;
+		addActionMessage("Product adde successfully");
+		return addProduct();
 	}
 	
 	/*
