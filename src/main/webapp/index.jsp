@@ -31,7 +31,7 @@
 	<s:iterator value="productList" status="status">
 			<div id="product" class="pull-left well">
 				<s:url id="url" action="Product_show" includeParams="get">
-					<s:param name="prodId" value="id"/>	
+					<s:param name="product.id" value="id"/>
 				</s:url>
 				<s:a value="%{url}">
 					<img src="/shop/assets/img/download.png" class="img-polaroid"/><br>

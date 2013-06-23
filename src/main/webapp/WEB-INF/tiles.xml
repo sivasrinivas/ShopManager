@@ -13,6 +13,11 @@
         <put-attribute name="related" value="" />
         <put-attribute name="footer" value="/layout/footer.jsp" />
     </definition>
+    <definition name="shopLayout-full" template="/layout/shopLayout-full.jsp">
+    	<put-attribute name="title" value="" />
+        <put-attribute name="body" value="" />
+        <put-attribute name="footer" value="/layout/footer.jsp" />
+    </definition>
     <!-- Layour for admin actions -->
     <definition name="adminLayout" template="/layout/adminlayout.jsp">
     	<put-attribute name="title" value="" />
@@ -40,6 +45,10 @@
         <put-attribute name="title" value="Login - ShopManager" />
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/user/login.jsp" />
+    </definition>
+    <definition name="product.show" extends="shopLayout-full">
+        <put-attribute name="title" value="Product page - ShopManager" />
+        <put-attribute name="body" value="/product.jsp" />
     </definition>
     
     <!-- admin related action tiles -->

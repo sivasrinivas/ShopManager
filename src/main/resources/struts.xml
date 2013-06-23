@@ -27,5 +27,9 @@
 			<result name="success" type="tiles">/user.login</result>
 			<result name="error" type="tiles">//</result>
 		</action>
+		<action name="Product_*" class="com.sivasrinivas.ShopManager.action.ProductAction" method="{1}">
+		    <result name="show" type="tiles">product.show</result>
+		</action>
+		
 	</package>
 </struts>
