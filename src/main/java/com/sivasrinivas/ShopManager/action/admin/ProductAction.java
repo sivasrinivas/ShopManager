@@ -40,6 +40,7 @@ public class ProductAction extends ActionSupport{
 	public String insertProduct(){
 		System.out.println("AddProduct action called.");
 		String result = "insertProduct";
+		System.out.println(product.getImage());
 		productService.insertProduct(product);
 		addActionMessage("Product adde successfully");
 		return addProduct();

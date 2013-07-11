@@ -3,14 +3,14 @@ package com.sivasrinivas.ShopManager.service.impl.admin;
 import java.util.Collection;
 import java.util.List;
 
-import com.sivasrinivas.ShopManager.dao.CommonDAO;
+import com.sivasrinivas.ShopManager.dao.MasterDAO;
 import com.sivasrinivas.ShopManager.dao.RoleDAO;
 import com.sivasrinivas.ShopManager.model.RoleModel;
 import com.sivasrinivas.ShopManager.service.admin.RoleService;
 
 public class RoleServiceImpl implements RoleService{
 	private RoleDAO roleDAO;
-	private CommonDAO commonDAO;
+	private MasterDAO masterDAO;
 	
 	@Override
 	public void addRole(RoleModel role) {
@@ -21,7 +21,7 @@ public class RoleServiceImpl implements RoleService{
 	public void deleteRole(RoleModel role) {
 		role = roleDAO.findById(role);
 		role.setDeprecated(true);
-		commonDAO.save(role);
+		masterDAO.save(role);
 	}
 	
 	@Override
@@ -57,15 +57,15 @@ public class RoleServiceImpl implements RoleService{
 	/**
 	 * @return the commonDAO
 	 */
-	public CommonDAO getCommonDAO() {
-		return commonDAO;
+	public MasterDAO getCommonDAO() {
+		return masterDAO;
 	}
 
 	/**
 	 * @param commonDAO the commonDAO to set
 	 */
-	public void setCommonDAO(CommonDAO commonDAO) {
-		this.commonDAO = commonDAO;
+	public void setMasterDAO(MasterDAO masterDAO) {
+		this.masterDAO = masterDAO;
 	}
 
 	

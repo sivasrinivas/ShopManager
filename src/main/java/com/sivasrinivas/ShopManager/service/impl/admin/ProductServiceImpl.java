@@ -1,10 +1,16 @@
 package com.sivasrinivas.ShopManager.service.impl.admin;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigInteger;
 import java.util.Collection;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.data.mongodb.gridfs.GridFsTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.sivasrinivas.ShopManager.model.ProductModel;
@@ -14,6 +20,8 @@ import com.sivasrinivas.ShopManager.service.admin.ProductService;
 public class ProductServiceImpl implements ProductService{
 	static Logger logger = Logger.getLogger(ProductServiceImpl.class) ;
 	private MongoOperations mongoOperations;
+	@Autowired	private GridFsTemplate gridFsTemplate;
+	private InputStream inputStream = null;
 	
 	/*
 	 * Adds a product to the product collection
@@ -22,8 +30,22 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public void insertProduct(ProductModel product) {
 		logger.info("Inserting product into product collection.");
-		System.out.println("inserting product into collection");
-		mongoOperations.insert(product);
+		try {
+			System.out.println(product.getImage());
+			inputStream = new FileInputStream(product.getImage());
+			gridFsTemplate.store(inputStream, "image", product);
+			mongoOperations.insert(product);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}finally{
+			if (inputStream != null) {
+				try {
+					inputStream.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 
 	@Override

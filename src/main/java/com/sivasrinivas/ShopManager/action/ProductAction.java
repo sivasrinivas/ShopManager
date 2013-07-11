@@ -7,6 +7,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.stereotype.Component;
 
 import com.opensymphony.xwork2.ActionSupport;
 import com.sivasrinivas.ShopManager.model.CategoryModel;
@@ -15,6 +16,7 @@ import com.sivasrinivas.ShopManager.service.MasterService;
 import com.sivasrinivas.ShopManager.service.admin.CategoryService;
 import com.sivasrinivas.ShopManager.service.admin.ProductService;
 
+@Component("ProductAction")
 public class ProductAction extends ActionSupport{
 	static Logger logger = Logger.getLogger(ProductAction.class);
 	/**

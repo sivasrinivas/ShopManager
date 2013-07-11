@@ -8,5 +8,6 @@
 		&nbsp;
 		<s:property value="product.color" />
 		<br> <b><s:property value="product.price" /></b><br>
+		<button class="btn btn-primary" onclick="addToCart(${product.id})">Add to Cart</button>
 	</div>
 </div>

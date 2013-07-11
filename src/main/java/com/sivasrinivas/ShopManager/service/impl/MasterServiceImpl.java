@@ -5,9 +5,11 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Service;
 
 import com.sivasrinivas.ShopManager.service.MasterService;
 
+@Service
 public class MasterServiceImpl implements MasterService {
 
 	@Autowired

@@ -6,14 +6,16 @@ package com.sivasrinivas.ShopManager.dao.impl;
 import java.util.List;
 
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.stereotype.Repository;
 
-import com.sivasrinivas.ShopManager.dao.CommonDAO;
+import com.sivasrinivas.ShopManager.dao.MasterDAO;
 
 /**
  * @author Siva
  *
  */
-public class CommonDAOImpl implements CommonDAO {
+@Repository
+public class MasterDAOImpl implements MasterDAO {
 
 	private MongoTemplate mongoTemplate;
 	

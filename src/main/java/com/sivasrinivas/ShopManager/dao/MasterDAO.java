@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @author Siva
  */
-public interface CommonDAO {
+public interface MasterDAO {
 	void deprecate(Object modelObjectToDeprecate);
 	void deprecate(Object modelObjectToDeprecate, String collectionName);
 	void remove(Object modelObjectToRemove);

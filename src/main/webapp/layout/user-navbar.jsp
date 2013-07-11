@@ -1,3 +1,9 @@
+<script>
+	$('document').ready(function(){
+		$('#cartCount').text(getCartCount());
+	});
+</script>
+
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <!-- user menu nav bar -->
 <div class="navbar navbar-fixed-top navbar-inverse">
@@ -18,6 +24,14 @@
 				<!-- link to trigger login modal -->
 				<li><a href="#loginModal" role="button" data-toggle="modal">Login</a></li>
 				<li><a href="./user/account"><i class="icon-user icon-white"></i> Account</a></li>
+				<li>
+					<div id="cart" class="">
+						<s:a href='./Prodcut_showCart.action'>
+							<i class="icon-shopping-cart icon-white"></i>
+							<span id="cartCount" class="badge">0</span>
+						</s:a>
+					</div>
+				</li>
 			</ul>
 		</div>
 	</div>
