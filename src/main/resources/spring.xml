@@ -29,7 +29,7 @@
  	<bean id="masterService" class="com.sivasrinivas.ShopManager.service.impl.MasterServiceImpl">
 	</bean>
  	
-	<bean id="commonDAO" class="com.sivasrinivas.ShopManager.dao.impl.CommonDAOImpl">
+	<bean id="masterDAO" class="com.sivasrinivas.ShopManager.dao.impl.MasterDAOImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>
 	</bean>
 	
@@ -57,7 +57,7 @@
 	</bean>
 	<bean id="roleService" class="com.sivasrinivas.ShopManager.service.impl.admin.RoleServiceImpl">
 		<property name="roleDAO" ref="roleDAO"></property>
-		<property name="commonDAO" ref="commonDAO"></property>
+		<property name="masterDAO" ref="masterDAO"></property>
 	</bean>
 	<bean id="roleDAO" class="com.sivasrinivas.ShopManager.dao.impl.RoleDAOImpl">
 		<property name="mongoTemplate" ref="mongoTemplate"></property>

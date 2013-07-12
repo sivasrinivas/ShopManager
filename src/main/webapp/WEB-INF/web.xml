@@ -66,6 +66,17 @@
     	<url-pattern>*.jsp</url-pattern>
   	</filter-mapping>
   
+  	<!-- for integrate struts2 with spring -->
+  	<listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+		<!-- Context Configuration locations for Spring XML files -->
+	<context-param>
+    	<param-name>contextConfigLocation</param-name>
+    	<param-value>/WEB-INF/applicationContext-*.xml,classpath*:applicationContext-*.xml</param-value>
+	</context-param>
+	
+	
   	<!-- spring/spring security listener -->
   	<listener>  
    		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
@@ -78,9 +89,7 @@
   	
 	<!-- struts tiles definition-->
 	<listener>
-    	<listener-class>
-        	org.apache.struts2.tiles.StrutsTilesListener
-    	</listener-class>
+    	<listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
 	</listener>
 	
 	<context-param>
