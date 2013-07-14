@@ -16,7 +16,6 @@ import com.sivasrinivas.ShopManager.service.MasterService;
 import com.sivasrinivas.ShopManager.service.admin.CategoryService;
 import com.sivasrinivas.ShopManager.service.admin.ProductService;
 
-@Component("ProductAction")
 public class ProductAction extends ActionSupport{
 	static Logger logger = Logger.getLogger(ProductAction.class);
 	/**
