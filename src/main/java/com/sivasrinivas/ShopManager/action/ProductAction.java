@@ -5,7 +5,6 @@ import java.util.Collection;
 import java.util.List;
 
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
 import org.springframework.stereotype.Component;
@@ -25,12 +24,9 @@ public class ProductAction extends ActionSupport{
 	 */
 	private static final long serialVersionUID = 3636674307392727439L;
 	/* getting application context and then mongoOperations*/
-//	ApplicationContext ctx = new GenericXmlApplicationContext("spring.xml");
-//	ProductService productService = (ProductService)ctx.getBean("productService");
-//	MasterService masterService = (MasterService)ctx.getBean("masterService");
-	
-	private @Autowired ProductService productService;
-	private @Autowired MasterService masterService;
+	ApplicationContext ctx = new GenericXmlApplicationContext("spring.xml");
+	ProductService productService = (ProductService)ctx.getBean("productService");
+	MasterService masterService = (MasterService)ctx.getBean("masterService");
 	
 	private ProductModel product;
 	private BigDecimal prodId;
