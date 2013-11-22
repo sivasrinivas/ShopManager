@@ -9,14 +9,21 @@
 	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
  
 	<http auto-config="true">
-		<!-- <intercept-url pattern="/admin/*" access="ROLE_ADMIN" />
+		<!-- <intercept-url pattern="/admin/*" access="Admin" />
 		<form-login login-page="/Login_execute.action" default-target-url="/home.html" authentication-failure-url="/loginfailed?error=true" /> -->  
+	</http>
+	
+	<http use-expressions="true">
+	    <intercept-url pattern="/user*" access="isAuthenticated()" />
+	    <form-login login-page="/login.jsp"/>
+	    <logout logout-url="/logout" logout-success-url="/"/>
 	</http>
  
 	<authentication-manager>
 	  <authentication-provider>
 	    <user-service>
-			<user name="siva" password="123456" authorities="ROLE_ADMIN" />
+			<user name="siva" password="123456" authorities="Admin" />
+			<user name="srinivas" password="test123" authorities="User" />
 	    </user-service>
 	  </authentication-provider>
 	</authentication-manager>

@@ -12,6 +12,8 @@
 
 	<properties>
 		<spring.version>3.2.2.RELEASE</spring.version>
+		<struts.version>2.3.14.2</struts.version>
+		<spring.security.version>3.1.4.RELEASE</spring.security.version>
 	</properties>
 
 	<dependencies>
@@ -86,19 +88,24 @@
 		<dependency>
   			<groupId>org.springframework.security</groupId>
   			<artifactId>spring-security-core</artifactId>
-  			<version>3.1.4.RELEASE</version>
+  			<version>${spring.security.version}</version>
 		</dependency>
  
 		<dependency>
   			<groupId>org.springframework.security</groupId>
   			<artifactId>spring-security-web</artifactId>
-  			<version>3.1.4.RELEASE</version>
+  			<version>${spring.security.version}</version>
 		</dependency>
  
 		<dependency>
   			<groupId>org.springframework.security</groupId>
   			<artifactId>spring-security-config</artifactId>
-  			<version>3.1.4.RELEASE</version>
+  			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+  			<groupId>org.springframework.security</groupId>
+  			<artifactId>spring-security-taglibs</artifactId>
+  			<version>${spring.security.version}</version>
 		</dependency>
 
 		<!-- Log4j dependencies -->

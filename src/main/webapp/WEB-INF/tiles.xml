@@ -41,10 +41,9 @@
         <put-attribute name="related" value="/layout/related.jsp" />
         <put-attribute name="body" value="/register.jsp" />
     </definition>
-    <definition name="/user.login" extends="userLayout">
+    <definition name="/user.login" extends="shopLayout-full">
         <put-attribute name="title" value="Login - ShopManager" />
-        <put-attribute name="related" value="/layout/related.jsp" />
-        <put-attribute name="body" value="/user/login.jsp" />
+        <put-attribute name="body" value="/login.jsp" />
     </definition>
     <definition name="product.show" extends="shopLayout-full">
         <put-attribute name="title" value="Product page - ShopManager" />

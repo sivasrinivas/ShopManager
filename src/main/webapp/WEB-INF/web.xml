@@ -21,9 +21,7 @@
     <!-- spring security filters -->
     <filter>
     	<filter-name>springSecurityFilterChain</filter-name>
-    	<filter-class>
-    		org.springframework.web.filter.DelegatingFilterProxy
-    	</filter-class>
+    	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
     
     <filter-mapping>  
@@ -39,10 +37,10 @@
     	</filter-class>
     </filter>
   
-    <filter-mapping>
+   <!--  <filter-mapping>
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
 	<filter-mapping>
 		<filter-name>struts2</filter-name>
 		<url-pattern>/*.action</url-pattern>
@@ -73,7 +71,10 @@
   	
   	<context-param>
     	<param-name>contextConfigLocation</param-name>
-    	<param-value>classpath:spring.xml</param-value>
+    	<param-value>
+    		classpath:spring.xml
+    		/WEB-INF/spring-security.xml
+    	</param-value>
 	</context-param>
   	
 	<!-- struts tiles definition-->
@@ -88,13 +89,6 @@
     	<param-value>
     		/WEB-INF/tiles.xml
     	</param-value>
-	</context-param>
-	
-	<context-param>
-		<param-name>contextConfigLocation</param-name>
-		<param-value>
-			/WEB-INF/spring-security.xml
-		</param-value>		
 	</context-param>
 	
  </web-app>

@@ -22,7 +22,8 @@
 				</li>
 				<li><a href="#">Accounts</a></li>
 				<!-- link to trigger login modal -->
-				<li><a href="#loginModal" role="button" data-toggle="modal">Login</a></li>
+				<!-- <li><a href="#loginModal" role="button" data-toggle="modal">Login</a></li> -->
+				<li><a href="./user/login"> Login</a></li>
 				<li><a href="./user/account"><i class="icon-user icon-white"></i> Account</a></li>
 				<li>
 					<div id="cart" class="">
